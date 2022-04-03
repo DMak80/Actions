@@ -1671,14 +1671,14 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "ConsoleApp1/1.0.0": {
+      "TestConsoleApp/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/ConsoleApp1.dll": {}
+          "bin/placeholder/TestConsoleApp.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ConsoleApp1.dll": {}
+          "bin/placeholder/TestConsoleApp.dll": {}
         }
       }
     }
@@ -5973,17 +5973,17 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "ConsoleApp1/1.0.0": {
+    "TestConsoleApp/1.0.0": {
       "type": "project",
-      "path": "../ConsoleApp1/ConsoleApp1.csproj",
-      "msbuildProject": "../ConsoleApp1/ConsoleApp1.csproj"
+      "path": "../TestConsoleApp/TestConsoleApp.csproj",
+      "msbuildProject": "../TestConsoleApp/TestConsoleApp.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj",
-      "ConsoleApp1 >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
+      "TestConsoleApp >= 1.0.0",
       "coverlet.collector >= 3.1.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
@@ -6024,8 +6024,8 @@
             "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj": {
               "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj"
             },
-            "C:\\Users\\user\\Desktop\\git\\Actions\\ConsoleApp1\\ConsoleApp1.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\ConsoleApp1\\ConsoleApp1.csproj"
+            "C:\\Users\\user\\Desktop\\git\\Actions\\TestConsoleApp\\TestConsoleApp.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\TestConsoleApp\\TestConsoleApp.csproj"
             }
           }
         }
