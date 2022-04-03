@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\ActionsTestApp.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj",
       "projectName": "ActionsTestApp",
-      "projectPath": "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\ActionsTestApp.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"

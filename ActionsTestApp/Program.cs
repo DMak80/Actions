@@ -9,6 +9,6 @@ public static class Program
 
     public static int GetOne()
     {
-        return 0;
+        return 1;
     }
 }
