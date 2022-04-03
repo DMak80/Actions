@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\git\\Actions\\TestProject1\\TestProject1.csproj": {}
+    "C:\\Users\\user\\Desktop\\ActionsTestApp\\TestProject1\\TestProject1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj": {
+    "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\ActionsTestApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\ActionsTestApp.csproj",
         "projectName": "ActionsTestApp",
-        "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\ActionsTestApp.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
@@ -68,14 +68,14 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\git\\Actions\\TestProject1\\TestProject1.csproj": {
+    "C:\\Users\\user\\Desktop\\ActionsTestApp\\TestProject1\\TestProject1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\git\\Actions\\TestProject1\\TestProject1.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Desktop\\ActionsTestApp\\TestProject1\\TestProject1.csproj",
         "projectName": "TestProject1",
-        "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\TestProject1\\TestProject1.csproj",
+        "projectPath": "C:\\Users\\user\\Desktop\\ActionsTestApp\\TestProject1\\TestProject1.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\git\\Actions\\TestProject1\\obj\\",
+        "outputPath": "C:\\Users\\user\\Desktop\\ActionsTestApp\\TestProject1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
@@ -96,8 +96,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\ActionsTestApp\\ActionsTestApp.csproj"
+              "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\ActionsTestApp.csproj": {
+                "projectPath": "C:\\Users\\user\\Desktop\\ActionsTestApp\\ActionsTestApp\\ActionsTestApp.csproj"
               }
             }
           }
