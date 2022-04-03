@@ -16,5 +16,4 @@ jobs:
 
     steps:
     - name: Test
-      run: cd ActionsTestApp
       run: dotnet test
