@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ActionsTestApp.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ActionsTestApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ActionsTestApp.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ActionsTestApp.AssemblyInfo.cs
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ActionsTestApp.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\bin\Debug\net5.0\ActionsTestApp.exe
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\bin\Debug\net5.0\ActionsTestApp.deps.json
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\bin\Debug\net5.0\ActionsTestApp.runtimeconfig.json
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\bin\Debug\net5.0\ActionsTestApp.runtimeconfig.dev.json
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\bin\Debug\net5.0\ActionsTestApp.dll
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\bin\Debug\net5.0\ActionsTestApp.pdb
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ActionsTestApp.dll
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\refint\ActionsTestApp.dll
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ActionsTestApp.pdb
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ActionsTestApp.genruntimeconfig.cache
+C:\Users\user\Desktop\ActionsTestApp\ActionsTestApp\obj\Debug\net5.0\ref\ActionsTestApp.dll
