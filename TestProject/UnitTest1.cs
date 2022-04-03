@@ -1,8 +1,8 @@
 
-using ConsoleApp1;
+using TestConsoleApp;
 using Xunit;
 
-namespace TestProject1;
+namespace TestProject;
 
 public class UnitTest1
 {
