@@ -16,4 +16,4 @@ jobs:
 
     steps:
     - name: Test
-      run: dotnet test ActionsTestApp
+      run: dotnet test
