@@ -20,11 +20,11 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    
-      
+
+
   test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - name: Test
-      run: dotnet test
+      run: dotnet test -v d
