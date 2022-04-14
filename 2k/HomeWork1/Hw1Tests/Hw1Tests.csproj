@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\hw1\hw1.csproj" />
+      <ProjectReference Include="..\Hw1\Hw1.csproj" />
     </ItemGroup>
 
 </Project>
