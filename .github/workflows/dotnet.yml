@@ -38,7 +38,6 @@ jobs:
         - name: use this action, test solution dir
           uses: zyborg/dotnet-tests-report@v1
           with:
-            project_path: /home/runner/work/Actions/Actions/2k/HomeWork1/Hw1Tests
             report_name: my_project_tests
             report_title: My Project Tests
             gist_badge_label: 'Contoso Business: %Counters_passed%/%Counters_total%'
