@@ -13,7 +13,8 @@ project.lock.json
 
 # Rider
 .idea/
-.obj
+obj
+bin
 
 # Visual Studio Code
 .vscode/
