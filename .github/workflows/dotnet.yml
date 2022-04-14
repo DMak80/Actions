@@ -26,16 +26,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: Test
       run: dotnet test
-
-  testcov:
-    runs-on: ubuntu-latest
-    steps:
-        - name: use this action, test solution dir
-          uses: zyborg/dotnet-tests-report@v1
-          with:
-            project_path: /home/runner/work/Actions/Actions/home/runner/work/Actions/Actions/2k/HomeWork1/Hw1Tests/Hw1Tests
-            report_name: my_project_tests
-            report_title: My Project Tests
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            gist_badge_label: 'Contoso Business: %Counters_passed%/%Counters_total%'
-            gist_token: ${{ secrets.GIST_TOKEN }}
+    - uses: dorny/test-reporter@v1
+      with:
+        name: Tests
+        path: 2k/HomeWork*/Hw*Tests/TestResults/*.trx
+        reporter: dotnet-trx
