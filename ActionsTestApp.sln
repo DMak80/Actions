@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2k\HomeWork1\Hw1", "2k\HomeWork1\Hw1\Hw1.csproj", "{6AD7D9BB-700A-4B6A-8CA3-30C5B2E00D1D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "\2k\HomeWork1\Hw1", "2k\HomeWork1\Hw1\Hw1.csproj", "{6AD7D9BB-700A-4B6A-8CA3-30C5B2E00D1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2k\HomeWork1\Hw1Tests", "2k\HomeWork1\Hw1Tests\Hw1Tests.csproj", "{5E5B6AF1-B3A1-475A-B57B-696CC39BA78C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "\2k\HomeWork1\Hw1Tests", "2k\HomeWork1\Hw1Tests\Hw1Tests.csproj", "{5E5B6AF1-B3A1-475A-B57B-696CC39BA78C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2k", "2k", "{70EA87E5-F317-41E7-8D35-8A9F118E052D}"
 EndProject
