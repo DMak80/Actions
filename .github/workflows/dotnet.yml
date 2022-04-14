@@ -28,7 +28,7 @@ jobs:
       run: dotnet test
 
   testcov:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
         - name: use this action, test solution dir
           uses: zyborg/dotnet-tests-report@v1
