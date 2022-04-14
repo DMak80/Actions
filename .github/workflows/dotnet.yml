@@ -27,4 +27,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Test
-      run: dotnet test -v n
+      run: dotnet test
