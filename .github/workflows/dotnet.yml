@@ -34,5 +34,5 @@ jobs:
     - uses: dorny/test-reporter@v1
       with:
         name: Tests
-        path: 2k/HomeWork*/Hw*Tests/TestResults/*.trx
+        path: 2k/HomeWork1/Hw1Tests/TestResults/*.trx
         reporter: dotnet-trx
