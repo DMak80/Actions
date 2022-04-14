@@ -1,7 +1,7 @@
-using hw1.Calculator;
-using hw1.Errors;
+using Hw1.Calculator;
+using Hw1.Errors;
 
-namespace hw1.Common
+namespace Hw1.Common
 {
     public static class Parser
     {

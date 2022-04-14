@@ -1,4 +1,4 @@
-using hw1.Errors;
+using Hw1.Errors;
 using Xunit;
 
 namespace Hw1Tests

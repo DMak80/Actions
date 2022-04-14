@@ -1,4 +1,4 @@
-using hw1.Calculator;
+using Hw1.Calculator;
 using Xunit;
 
 namespace Hw1Tests

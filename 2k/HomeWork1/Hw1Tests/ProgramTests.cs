@@ -1,4 +1,4 @@
-using hw1;
+using Hw1;
 using Xunit;
 
 namespace Hw1Tests

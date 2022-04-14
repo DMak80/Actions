@@ -1,4 +1,4 @@
-namespace hw1.Calculator
+namespace Hw1.Calculator
 {
     public enum CalculatorOperation : byte
     {

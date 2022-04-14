@@ -1,4 +1,4 @@
-namespace hw1.Errors
+namespace Hw1.Errors
 {
     public enum ErrorCode
     {

@@ -1,7 +1,7 @@
-﻿using hw1.Common;
-using hw1.Errors;
+﻿using Hw1.Common;
+using Hw1.Errors;
 
-namespace hw1
+namespace Hw1
 {
     public static class Program
     {

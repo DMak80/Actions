@@ -1,6 +1,6 @@
-using hw1.Calculator;
-using hw1.Common;
-using hw1.Errors;
+using Hw1.Calculator;
+using Hw1.Common;
+using Hw1.Errors;
 using Xunit;
 
 namespace Hw1Tests
