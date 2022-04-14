@@ -5975,8 +5975,8 @@
     },
     "Hw1/1.0.0": {
       "type": "project",
-      "path": "../Hw1/Hw1.csproj",
-      "msbuildProject": "../Hw1/Hw1.csproj"
+      "path": "../hw1/Hw1.csproj",
+      "msbuildProject": "../hw1/Hw1.csproj"
     }
   },
   "projectFileDependencyGroups": {
