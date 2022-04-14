@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="50ab747e-a3ab-4512-91c3-e53e41369ef0" name="user@GIVI 2022-04-14 19:11:44" runUser="GIVI\user" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-04-14T19:11:44.7271985+03:00" queuing="2022-04-14T19:11:44.7271986+03:00" start="2022-04-14T19:11:43.0490123+03:00" finish="2022-04-14T19:11:44.7327781+03:00" />
+  <TestSettings name="default" id="3607cfa0-6327-4991-8577-d20034ca3094">
+    <Deployment runDeploymentRoot="user_GIVI_2022-04-14_19_11_44" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="08239772-2231-47bf-849b-6c41613e384c" testId="ee7088f3-5d9d-7a5f-3516-ce6e2a719e8f" testName="Hw2Tests.UnitTest1.Test1" computerName="GIVI" duration="00:00:00.0017512" startTime="2022-04-14T19:11:44.6306559+03:00" endTime="2022-04-14T19:11:44.6306783+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="08239772-2231-47bf-849b-6c41613e384c">
+      <Output>
+        <ErrorInfo>
+          <Message>System.NotImplementedException : The method or operation is not implemented.</Message>
+          <StackTrace>   at Hw2.Program.GetFive() in C:\Users\user\Desktop\git\Actions\2k\HomeWork2\Hw2\Program.cs:line 12&#xD;
+   at Hw2Tests.UnitTest1.Test1() in C:\Users\user\Desktop\git\Actions\2k\HomeWork2\Hw2Tests\UnitTest1.cs:line 12</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Hw2Tests.UnitTest1.Test1" storage="c:\users\user\desktop\git\actions\2k\homework2\hw2tests\bin\debug\net6.0\hw2tests.dll" id="ee7088f3-5d9d-7a5f-3516-ce6e2a719e8f">
+      <Execution id="08239772-2231-47bf-849b-6c41613e384c" />
+      <TestMethod codeBase="C:\Users\user\Desktop\git\Actions\2k\HomeWork2\Hw2Tests\bin\Debug\net6.0\Hw2Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Hw2Tests.UnitTest1" name="Test1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="ee7088f3-5d9d-7a5f-3516-ce6e2a719e8f" executionId="08239772-2231-47bf-849b-6c41613e384c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Список результатов" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" passed="0" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.4)&#xD;
+[xUnit.net 00:00:00.41]   Discovering: Hw2Tests&#xD;
+[xUnit.net 00:00:00.44]   Discovered:  Hw2Tests&#xD;
+[xUnit.net 00:00:00.44]   Starting:    Hw2Tests&#xD;
+[xUnit.net 00:00:00.50]       System.NotImplementedException : The method or operation is not implemented.&#xD;
+[xUnit.net 00:00:00.50]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.50]         C:\Users\user\Desktop\git\Actions\2k\HomeWork2\Hw2\Program.cs(12,0): at Hw2.Program.GetFive()&#xD;
+[xUnit.net 00:00:00.50]         C:\Users\user\Desktop\git\Actions\2k\HomeWork2\Hw2Tests\UnitTest1.cs(12,0): at Hw2Tests.UnitTest1.Test1()&#xD;
+[xUnit.net 00:00:00.51]   Finished:    Hw2Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="GIVI" outcome="Error" timestamp="2022-04-14T19:11:44.6263653+03:00">
+        <Text>[xUnit.net 00:00:00.50]     Hw2Tests.UnitTest1.Test1 [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
