@@ -32,7 +32,7 @@ jobs:
     - name: Test
       run: dotnet test
 
-testcov:
+  testcov:
     runs-on: ubuntu-latest
     steps:
         - name: use this action, test solution dir
