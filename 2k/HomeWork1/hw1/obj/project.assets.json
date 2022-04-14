@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\hw1\\Hw1.csproj",
-      "projectName": "Hw1",
-      "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\hw1\\Hw1.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\hw1\\hw1.csproj",
+      "projectName": "hw1",
+      "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\hw1\\hw1.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\hw1\\obj\\",
       "projectStyle": "PackageReference",
