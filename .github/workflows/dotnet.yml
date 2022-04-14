@@ -28,11 +28,11 @@ jobs:
       run: dotnet test --logger "trx;LogFileName=test-results.trx"
 
 
-test-report:
-  runs-on: ubuntu-latest
-  steps:
-  - uses: dorny/test-reporter@v1
-    with:
-      name: Tests
-      path: 2k/HomeWork*/Hw*Tests/TestResults/*.trx
-      reporter: dotnet-trx
+  test-report:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: dorny/test-reporter@v1
+      with:
+        name: Tests
+        path: 2k/HomeWork*/Hw*Tests/TestResults/*.trx
+        reporter: dotnet-trx
