@@ -39,14 +39,11 @@ namespace Hw1Tests
         }
         
         [Theory]
-        [InlineData(5, CalculatorOperation.Multiply, 7, 35)]
-        [InlineData(-5, CalculatorOperation.Multiply, 7, -35)]
-        [InlineData(-5, CalculatorOperation.Multiply, -7, 35)]
-        [InlineData(5, CalculatorOperation.Multiply, -7, -35)]
+        [InlineData(5, CalculatorOperation.Multiply, 7, 40)]
         public void fail(int val1, CalculatorOperation operation, int val2, int expected)
         {
             var result = Calculator.Calculate(val1, operation, val2);
-            Assert.Equal(1, 2);
+            Assert.Equal(expected, result);
         }
         
         [Theory]
