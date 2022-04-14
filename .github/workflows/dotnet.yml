@@ -23,7 +23,7 @@ jobs:
     - name: Codecov
       uses: codecov/codecov-action@v2.1.0
       with:
-        file: ""
+        file: "codecov.xml"
 
   test:
     runs-on: ubuntu-latest
