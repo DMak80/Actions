@@ -9,6 +9,6 @@ public static class Program
 
     public static int GetFive()
     {
-        throw new NotImplementedException();
+        return 5;
     }
 }
