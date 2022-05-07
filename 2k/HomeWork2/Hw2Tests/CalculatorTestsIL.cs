@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Hw2Tests;
 
-public class UnitTest1
+public class CalculatorTestsIL
 {
     [Fact]
     public void Calculate_220Plus8_228Returned()
