@@ -7,5 +7,6 @@
     &lt;TestId&gt;xUnit::5E5B6AF1-B3A1-475A-B57B-696CC39BA78C::net6.0::Hw1Tests.ParserTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::5E5B6AF1-B3A1-475A-B57B-696CC39BA78C::net6.0::Hw1Tests.ProgramTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::29A7EE72-C59B-49A5-A22E-3F5012C51F16::net6.0::Hw2Tests.UnitTest1&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::E2BC730B-982F-4A17-AB8E-707DAC1F3B69::net5.0::Homework4.Tests.CalculatorTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

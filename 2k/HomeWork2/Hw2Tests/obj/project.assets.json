@@ -1671,6 +1671,16 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
+      "Homework2.IL/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Homework2.IL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Homework2.IL.dll": {}
+        }
+      },
       "Hw2/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -5973,6 +5983,11 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "Homework2.IL/1.0.0": {
+      "type": "project",
+      "path": "../Hw2IL/Homework2.IL.ilproj",
+      "msbuildProject": "../Hw2IL/Homework2.IL.ilproj"
+    },
     "Hw2/1.0.0": {
       "type": "project",
       "path": "../Hw2/Hw2.csproj",
@@ -5981,6 +5996,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Homework2.IL >= 1.0.0",
       "Hw2 >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.11.0",
       "coverlet.collector >= 3.1.0",
@@ -6025,6 +6041,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "D:\\repos\\Actions\\2k\\HomeWork2\\Hw2IL\\Homework2.IL.ilproj": {
+              "projectPath": "D:\\repos\\Actions\\2k\\HomeWork2\\Hw2IL\\Homework2.IL.ilproj"
+            },
             "D:\\repos\\Actions\\2k\\HomeWork2\\Hw2\\Hw2.csproj": {
               "projectPath": "D:\\repos\\Actions\\2k\\HomeWork2\\Hw2\\Hw2.csproj"
             }
@@ -6077,7 +6096,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
