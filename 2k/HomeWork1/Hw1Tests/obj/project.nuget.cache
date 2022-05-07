@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "LUKAL7GK8cx4EPJzFSBBI6D66EDlNF9X5kyN4tj05ALgz0vq3EAoEB3enSzMYrBe4GhcLlAmEBmfxxQgcjr2iA==",
+=======
+  "dgSpecHash": "S8x2E8XKlmiDBIo/jrQSjW/bU1ThTRBdYyfg3XBVfmPy0sJZ8DTQq2OaBrFqHf4l+aRPR3mol3xma/FAaCsGhg==",
+>>>>>>> Stashed changes
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\Hw1Tests\\Hw1Tests.csproj",
   "expectedPackageFiles": [
