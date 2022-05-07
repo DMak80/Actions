@@ -6,9 +6,4 @@ public class Program
     {
         
     }
-
-    public static int GetFive()
-    {
-        throw new NotImplementedException();
-    }
 }
