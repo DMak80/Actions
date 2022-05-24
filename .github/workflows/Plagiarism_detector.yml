@@ -7,7 +7,7 @@ jobs:
   PlagiarismChecker:
     runs-on: ubuntu-latest
     steps:
-      - name: Plagiarism checker action
+      - name: Plagiarism checker
         uses: Giviruk/plagiarism-action@main
         with:
           github-access-token: ${{ secrets.ACCESS_TOKEN }}
