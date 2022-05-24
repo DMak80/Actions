@@ -1,0 +1,20 @@
+name: Plagiarism detector
+
+on: [push, pull_request]
+
+jobs:
+
+  PlagiarismChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Plagiarism checker action
+        uses: Giviruk/plagiarism-action@master
+        with:
+          github-access-token: ${{ secrets.ACCESS_TOKEN }}
+          repository-name: ${{ github.repository }}
+          
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: plagiarism-checker-report
+          path: ${{ github.workspace }}/outputs
