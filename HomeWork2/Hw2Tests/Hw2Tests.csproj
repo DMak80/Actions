@@ -21,7 +21,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Hw1\Hw1.csproj" />
+      <ProjectReference Include="..\Hw2IL\Homework2.IL.ilproj" />
+      <ProjectReference Include="..\Hw2\Hw2.csproj" />
     </ItemGroup>
 
 </Project>
