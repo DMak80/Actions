@@ -1,6 +1,6 @@
 ﻿namespace Homework5
 type Operation =
-    | Plus
-    | Minus
-    | Multiply
-    | Divide
+    | Плюс
+    | Минус
+    | Умножение
+    | Деление
