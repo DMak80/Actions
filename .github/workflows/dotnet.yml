@@ -24,10 +24,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Test
+    - name: test
       run: dotnet test --logger "trx;LogFileName=test-results.trx"
     - uses: actions/upload-artifact@v2
       if: success() || failure()
       with:
         name: test-results
-        path: 2k/HomeWork*/Hw*Tests/TestResults/*.trx
+        path: HomeWork*/Hw*Tests/TestResults/*.trx

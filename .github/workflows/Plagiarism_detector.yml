@@ -1,6 +1,10 @@
 name: Plagiarism detector
 
-on: [push, pull_request]
+on:
+  workflow_run:
+    workflows: ['Test Report']                     # runs after CI workflow
+    types:
+      - completed
 
 jobs:
 
@@ -12,7 +16,7 @@ jobs:
         with:
           github-access-token: ${{ secrets.ACCESS_TOKEN }}
           repository-name: ${{ github.repository }}
-          
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
