@@ -4365,7 +4365,7 @@
       ]
     },
     "System.Reflection.Metadata/1.6.0": {
-      "sha512": "I4aWCii7N1bmn43vviRfJQYW6UAco1G/CcjJouvgGdb/sr2BRTSnddhaPMg2oxu9VHFn8T1z3dTLq0pna8zmtA==",
+      "sha512": "COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "type": "package",
       "path": "system.reflection.metadata/1.6.0",
       "files": [
@@ -5989,28 +5989,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\malyshkin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\repos\\Actions\\2k\\HomeWork1\\Hw1Tests\\Hw1Tests.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\Hw1Tests\\Hw1Tests.csproj",
       "projectName": "Hw1Tests",
-      "projectPath": "D:\\repos\\Actions\\2k\\HomeWork1\\Hw1Tests\\Hw1Tests.csproj",
-      "packagesPath": "C:\\Users\\malyshkin\\.nuget\\packages\\",
-      "outputPath": "D:\\repos\\Actions\\2k\\HomeWork1\\Hw1Tests\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\Hw1Tests\\Hw1Tests.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\Hw1Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
       ],
       "configFilePaths": [
-        "C:\\Users\\malyshkin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6025,8 +6020,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\repos\\Actions\\2k\\HomeWork1\\Hw1\\Hw1.csproj": {
-              "projectPath": "D:\\repos\\Actions\\2k\\HomeWork1\\Hw1\\Hw1.csproj"
+            "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\Hw1\\Hw1.csproj": {
+              "projectPath": "C:\\Users\\user\\Desktop\\git\\Actions\\2k\\HomeWork1\\Hw1\\Hw1.csproj"
             }
           }
         }
@@ -6077,7 +6072,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

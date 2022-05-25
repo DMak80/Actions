@@ -204,7 +204,7 @@ C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\obj\Debug\net6.0\Hw1Test
 C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\obj\Debug\net6.0\Hw1Tests.csproj.CoreCompileInputs.cache
 C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\obj\Debug\net6.0\Hw1Tests.csproj.CopyComplete
 C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\obj\Debug\net6.0\Hw1Tests.dll
-C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\obj\Debug\net6.0\refint\Hw1Tests.dll
 C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\obj\Debug\net6.0\Hw1Tests.pdb
 C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\obj\Debug\net6.0\Hw1Tests.genruntimeconfig.cache
 C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\obj\Debug\net6.0\ref\Hw1Tests.dll
+C:\Users\user\Desktop\git\Actions\2k\HomeWork1\Hw1Tests\bin\Debug\net6.0\ref\Hw1Tests.dll
