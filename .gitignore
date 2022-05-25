@@ -17,3 +17,6 @@ project.lock.json
 
 # Visual Studio Code
 .vscode/
+
+bin
+obj
