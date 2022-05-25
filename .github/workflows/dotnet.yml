@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master, testcov ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, develop ]
 
 jobs:
   build:
@@ -30,4 +30,4 @@ jobs:
       if: success() || failure()
       with:
         name: test-results
-        path: 2k/HomeWork*/Hw*Tests/TestResults/*.trx
+        path: HomeWork*/Hw*Tests/TestResults/*.trx
