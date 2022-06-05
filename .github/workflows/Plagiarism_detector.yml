@@ -1,11 +1,11 @@
 name: Plagiarism detector
 
 on:
-  workflow_run:
-    workflows: ['Test Report']                     # runs after CI workflow
-    types:
-      - completed
-
+  push:
+    branches: [ master, testcov ]
+  pull_request:
+    branches: [ master, develop ]
+    
 jobs:
 
   PlagiarismChecker:
