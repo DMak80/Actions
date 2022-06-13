@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Hosting;
 using Xunit;
 
-namespace Homework6.Tests
+namespace Hw6Tests
 {
 	public class HostBuilder : WebApplicationFactory<App.Startup>
 	{

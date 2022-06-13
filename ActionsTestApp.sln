@@ -23,15 +23,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw2Tests", "HomeWork2\Hw2Te
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework4", "HomeWork4\Homework4\Homework4.fsproj", "{D9F80C8B-D4B8-4215-8325-7C4FC777131C}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework4.Tests", "HomeWork4\Homework4.Tests\Homework4.Tests.fsproj", "{57E1616E-C728-4C96-923C-DE1381AD1211}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Hw4Tests", "HomeWork4\Hw4Tests\Hw4Tests.fsproj", "{57E1616E-C728-4C96-923C-DE1381AD1211}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework5", "HomeWork5\Homework5\Homework5.fsproj", "{D8F71E84-9B3B-445B-A896-EECBCB26776A}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework5.Tests", "HomeWork5\Homework5.Tests\Homework5.Tests.fsproj", "{A051D520-7938-429A-93A0-5633DB07D2FF}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Hw5Tests", "HomeWork5\Hw5Tests\Hw5Tests.fsproj", "{A051D520-7938-429A-93A0-5633DB07D2FF}"
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Homework6", "HomeWork6\Homework6\Homework6.fsproj", "{DDC5F1D9-C043-4EAD-9F5A-261D26A887EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework6.Tests", "HomeWork6\Homework6.Tests\Homework6.Tests.csproj", "{9015C2E7-0BA7-4EF6-A27C-CA87201EFECF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw6Tests", "HomeWork6\Hw6Tests\Hw6Tests.csproj", "{9015C2E7-0BA7-4EF6-A27C-CA87201EFECF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
