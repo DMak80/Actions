@@ -11,6 +11,7 @@ project.lock.json
 *.vc.vc.opendb
 *.vc.db
 
+
 # Rider
 .idea/
 obj
@@ -18,3 +19,6 @@ bin
 
 # Visual Studio Code
 .vscode/
+
+bin
+obj
