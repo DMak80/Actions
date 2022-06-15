@@ -15,5 +15,10 @@ namespace Hw1
             Console.WriteLine($"Result is: {result}");
             return (int) ErrorCode.Correct;
         }
+
+        public static void NotMain()
+        {
+            
+        }
     }
 }
