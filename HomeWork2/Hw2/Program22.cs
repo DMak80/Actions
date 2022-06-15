@@ -1,6 +1,6 @@
 ﻿namespace Hw2;
 
-public class Program
+public class Program22
 {
     public static void NotMain()
     {
