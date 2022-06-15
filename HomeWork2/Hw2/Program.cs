@@ -6,4 +6,9 @@ public class Program
     {
         
     }
+
+    private void DemoMethod(string demoString)
+    {
+        Console.Write(demoString);
+    }
 }
