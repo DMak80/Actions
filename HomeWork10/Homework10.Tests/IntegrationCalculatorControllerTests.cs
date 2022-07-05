@@ -49,7 +49,7 @@ public class IntegrationCalculatorControllerTests : IClassFixture<WebApplication
 		public async Task Calculate_CalculateExpression_FastSuccess()
 		{
 			var rnd = new Random();
-			var expression = $"{rnd.Next(0, int.MaxValue / 2)} plus {rnd.Next(0, int.MaxValue / 2)}";
+			var expression = $"{rnd.Next(0, int.MaxValue / 2)} - {rnd.Next(0, int.MaxValue / 2)}";
             
 			var str = $"expression={expression}";
 			var stringContent = new StringContent(str, Encoding.UTF8);
