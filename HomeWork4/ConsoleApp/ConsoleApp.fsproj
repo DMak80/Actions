@@ -2,13 +2,12 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <WarnOn>3390;$(WarnOn)</WarnOn>
-        <RootNamespace>Homework4</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Operation.fs" />
+        <Compile Include="CalculatorOperation.fs" />
         <Compile Include="Calculator.fs" />
         <Compile Include="Program.fs" />
     </ItemGroup>
