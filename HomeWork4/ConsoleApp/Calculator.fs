@@ -1,7 +1,4 @@
-﻿module Homework4.Calculator
-
-open System
-open Homework4
+﻿module ConsoleApp.Calculator
 
 let calculate (value1 : double) (operation : CalculatorOperation) (value2 : double) =
     match operation with

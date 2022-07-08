@@ -1,7 +1,7 @@
-module Tests.Tests
+module Hw4Tests.Tests
 
 open System
-open Homework4
+open ConsoleApp
 open Xunit
         
 [<Theory>]

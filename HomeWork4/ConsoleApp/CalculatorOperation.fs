@@ -1,4 +1,4 @@
-﻿namespace Homework4
+﻿namespace ConsoleApp
 
 type CalculatorOperation =
      | Plus = 0

@@ -1,4 +1,4 @@
-﻿module Homework4.Program
+﻿module ConsoleApp.Program
 
 [<EntryPoint>]
 let main _ = 0
