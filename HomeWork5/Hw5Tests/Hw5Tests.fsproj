@@ -26,7 +26,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\HomeWork4\ConsoleApp\ConsoleApp.fsproj" />
       <ProjectReference Include="..\Hw5\Hw5.fsproj" />
     </ItemGroup>
 
