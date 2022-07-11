@@ -1,7 +1,7 @@
 module Hw4Tests.Tests
 
 open System
-open ConsoleApp
+open Hw4
 open Xunit
         
 [<Theory>]

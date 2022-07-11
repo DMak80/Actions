@@ -4,6 +4,10 @@
         <TargetFramework>net5.0</TargetFramework>
 
         <IsPackable>false</IsPackable>
+
+        <RootNamespace>Hw6Tests</RootNamespace>
+
+        <AssemblyName>Hw6Tests</AssemblyName>
     </PropertyGroup>
 
     <ItemGroup>
@@ -21,7 +25,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Homework6\Homework6.fsproj" />
+      <ProjectReference Include="..\Hw6\Hw6.fsproj" />
+      <ProjectReference Include="..\Hw6\Hw6.fsproj" />
     </ItemGroup>
 
 </Project>

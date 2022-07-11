@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp
+﻿namespace Hw4
 
 type CalculatorOperation =
      | Plus = 0

@@ -27,6 +27,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\ConsoleApp\ConsoleApp.fsproj" />
+      <ProjectReference Include="..\Hw4\Hw4.fsproj" />
     </ItemGroup>
 
 </Project>
