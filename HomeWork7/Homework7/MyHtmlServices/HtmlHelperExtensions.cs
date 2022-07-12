@@ -23,7 +23,7 @@ public static class HtmlHelperExtensions
         };
         div.InnerHtml.AppendHtml(CreateLabelForTitle(propertyInfo));
         div.InnerHtml.AppendHtml(CreateFieldForInput(propertyInfo, model));
-        div.InnerHtml.AppendHtml(Validator.Validate(propertyInfo, model));
+        div.InnerHtml.AppendHtml(MakeSpan(propertyInfo, model));
         return div;
     }
 
@@ -116,5 +116,28 @@ public static class HtmlHelperExtensions
         };
 
         return input;
+    }
+
+    public static IHtmlContent MakeSpan(PropertyInfo propertyInfo, object model)
+    {
+        if (model is null) return null;
+        var attributes = propertyInfo.GetCustomAttributes<ValidationAttribute>();
+        foreach (var attr in attributes)
+        {
+            var value = propertyInfo.GetValue(model);
+            if (attr.IsValid(value)) continue;
+            var span = new TagBuilder("span")
+            {
+                Attributes =
+                {
+                    { "class", "text-danger" },
+                    { "data-for", "propertyInfo.Name" },
+                    { "data-replace", "true" }
+                }
+            };
+            span.InnerHtml.Append(attr.ErrorMessage ?? attr.FormatErrorMessage(propertyInfo.Name)!);
+            return span;
+        }
+        return null;
     }
 } 
