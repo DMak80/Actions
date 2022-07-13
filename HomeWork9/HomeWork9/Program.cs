@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using HomeWork9.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,4 +27,5 @@ app.MapControllerRoute(
 
 app.Run();
 
+[ExcludeFromCodeCoverage]
 public partial class Program { }

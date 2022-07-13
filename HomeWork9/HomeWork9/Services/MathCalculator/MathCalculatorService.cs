@@ -25,7 +25,7 @@ public class MathCalculatorService : IMathCalculatorService
         _mathExpressionCalculator = mathExpressionCalculator;
     }
 
-    public async Task<CalculationMathExpressionResultDto> CalculateMathExpressionAsync(string expression)
+    public async Task<CalculationMathExpressionResultDto> CalculateMathExpressionAsync(string? expression)
     {
         var parseResult = _mathExpressionParser.ParseStringExpressionToTokens(expression);
         if (!parseResult.IsSuccess)

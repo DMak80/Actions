@@ -1,9 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\TimurSadorov\AppData\Local\JetBrains\Rider2022.1\resharper-host\temp\Rider\vAny\CoverageData\_ActionsTestApp.-812131664\Snapshot\snapshot.utdcvr</s:String>
 	
 	
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0e55d529_002D426a_002D4dce_002Daabb_002D517f92f63159/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;2k&amp;gt;\&amp;lt;hw1&amp;gt;\&amp;lt;Hw1Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::97A4F960-C6EF-4B8C-BD58-B30A077D8D0D::net6.0::Hw2Tests.CalculatorTestsIL.Calculate_220Plus8_228Returned&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::57E1616E-C728-4C96-923C-DE1381AD1211::net5.0::Homework4.Tests.CalculatorTests&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Solution /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

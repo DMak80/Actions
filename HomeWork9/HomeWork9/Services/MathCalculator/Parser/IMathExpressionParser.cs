@@ -5,6 +5,6 @@ namespace HomeWork9.Services.MathCalculator.Parser;
 
 public interface IMathExpressionParser
 {
-    ParseResult ParseStringExpressionToTokens(string expression);
+    ParseResult ParseStringExpressionToTokens(string? expression);
     Expression ParseTokensToExpressionTree(IEnumerable<Token> tokens);
 }

@@ -4,5 +4,5 @@ namespace HomeWork9.Services.MathCalculator;
 
 public interface IMathCalculatorService
 {
-    public Task<CalculationMathExpressionResultDto> CalculateMathExpressionAsync(string expression);
+    public Task<CalculationMathExpressionResultDto> CalculateMathExpressionAsync(string? expression);
 }

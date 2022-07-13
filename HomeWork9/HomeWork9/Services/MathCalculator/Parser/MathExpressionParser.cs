@@ -26,7 +26,7 @@ public class MathExpressionParser: IMathExpressionParser
         {"/", ExpressionType.Divide}
     };
 
-    public ParseResult ParseStringExpressionToTokens(string expression)
+    public ParseResult ParseStringExpressionToTokens(string? expression)
     {
         if (string.IsNullOrEmpty(expression))
             return new ParseResult(new List<Token>());
