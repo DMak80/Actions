@@ -1,4 +1,6 @@
-﻿using System.Linq.Expressions;
+﻿using System.Collections.Generic;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 using HomeWork9.Services.MathCalculator.MathExpressionGraph;
 
 namespace HomeWork9.Services.MathCalculator.ParallelCalculator;
