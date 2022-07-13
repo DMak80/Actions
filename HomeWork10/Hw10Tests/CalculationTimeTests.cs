@@ -15,9 +15,9 @@ public class CalculationTimeTests: IClassFixture<TestApplicationFactory>
     }
     
     [Theory]
-    [InlineData("(2 + 3) * (5 + 6)", 2000, 3000)]
     [InlineData("2 + 3 + 4 + 6", 3000, 4000)]
-    [InlineData("(2+3) / 12 * 7 + 8 * 9", 4000, 5000)]
+    [InlineData("(2 * 3 + 3 * 3) * (5 / 5 + 6 / 6)", 3000, 4000)]
+    [InlineData("(2 + 3) / 12 * 7 + 8 * 9", 4000, 5000)]
     private async Task Calculate_ParallelTest(string expression, long minExpectedTime, long maxExpectedTime)
     {
         var executionTime = await GetRequestExecutionTime(expression);
