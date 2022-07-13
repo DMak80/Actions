@@ -1,5 +1,9 @@
+using System.Diagnostics.CodeAnalysis;
 using Homework8.Calculator;
 
+namespace Homework8;
+
+[ExcludeFromCodeCoverage]
 public class Program
 {
     public static void Main(string[] args)
@@ -7,7 +11,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllersWithViews();
-        builder.Services.AddSingleton<ICalculator, Calculator>();
+        builder.Services.AddSingleton<ICalculator, Calculator.Calculator>();
 
         var app = builder.Build();
 
