@@ -27,12 +27,14 @@ public class MathExpressionCalculator : IMathExpressionCalculator
 
     private static double CalculateExpression(double v1, ExpressionType expressionType, double v2)
     {
-        return expressionType switch
+        double result =  0;
+        result = expressionType switch
         {
             ExpressionType.Add => v1 + v2,
             ExpressionType.Subtract => v1 - v2,
             ExpressionType.Divide => v2 == 0 ? double.NaN : v1 / v2,
             ExpressionType.Multiply => v1 * v2,
         };
+        return result;
     }
 }
