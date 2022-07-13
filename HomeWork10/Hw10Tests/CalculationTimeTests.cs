@@ -21,8 +21,12 @@ public class CalculationTimeTests: IClassFixture<TestApplicationFactory>
     private async Task Calculate_ParallelTest(string expression, long minExpectedTime, long maxExpectedTime)
     {
         var executionTime = await GetRequestExecutionTime(expression);
-        Assert.True(executionTime >= minExpectedTime);
-        Assert.True(executionTime <= maxExpectedTime);
+        Assert.True(executionTime >= minExpectedTime, 
+            $"Время подсчета меньше ожидаемого. " +
+            $"Мин время: {minExpectedTime}, актуальное время: {executionTime}");
+        Assert.True(executionTime <= maxExpectedTime,
+            $"Время подсчета больше ожидаемого." +
+            $" Макс время: {maxExpectedTime}, актуальное время: {executionTime});");
     }
     
     [Theory]
