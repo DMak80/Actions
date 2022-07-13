@@ -1,13 +1,18 @@
+using System.Diagnostics.CodeAnalysis;
+
+namespace Homework7;
+
+[ExcludeFromCodeCoverage]
 public class Program
 {
     static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-        
+
         builder.Services.AddControllersWithViews();
 
         var app = builder.Build();
-        
+
         if (!app.Environment.IsDevelopment())
         {
             app.UseExceptionHandler("/Home/Error");
