@@ -1,6 +1,6 @@
 # Домашняя работа №10
 
-## Теория
+## Теори
  1. [IEnumerable и IQueryable в Entity Framework](https://metanit.com/sharp/entityframework/1.4.php)
  2.  [Принципы работы IQueryable и LINQ-провайдеров данных](https://habr.com/ru/post/256821/)
  3. [Реализация своих поставщиков запросов](https://www.youtube.com/watch?v=QVdfx51mlao&feature=youtu.be) ([репозиторий](https://github.com/anetegithub/Linq.GraphQL))
