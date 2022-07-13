@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using HomeWork9.Services.MathCalculator.MathExpressionGraph;
@@ -28,13 +29,22 @@ public class MathExpressionCalculator : IMathExpressionCalculator
     private static double CalculateExpression(double v1, ExpressionType expressionType, double v2)
     {
         double result =  0;
-        result = expressionType switch
+        switch (expressionType)
         {
-            ExpressionType.Add => v1 + v2,
-            ExpressionType.Subtract => v1 - v2,
-            ExpressionType.Divide => v2 == 0 ? double.NaN : v1 / v2,
-            ExpressionType.Multiply => v1 * v2,
-        };
+            case ExpressionType.Add:
+                result = v1 + v2;
+                break;
+            case ExpressionType.Subtract:
+                result = v1 - v2;
+                break;
+            case ExpressionType.Divide:
+                result = v2 == 0 ? double.NaN : v1 / v2;
+                break;
+            case ExpressionType.Multiply:
+                result = v1 * v2;
+                break;
+        }
+
         return result;
     }
 }
