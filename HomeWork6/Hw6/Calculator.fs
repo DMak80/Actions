@@ -1,5 +1,6 @@
 ﻿module Hw6.Calculator
 
+[<System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage>]
 let inline calculate value1 operation value2 =
     match operation with
     | CalculatorOperation.Plus -> value1 + value2
