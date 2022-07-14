@@ -12,7 +12,7 @@
     &lt;TestId&gt;xUnit::E9FC68FC-2BCA-4019-943A-7B4F96876153::net6.0::Hw7Tests.TestFormTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0e57005d_002D6b32_002D48b7_002D9d51_002De1a42ddf99ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="UserFormTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0e57005d_002D6b32_002D48b7_002D9d51_002De1a42ddf99ec/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="UserFormTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::E9FC68FC-2BCA-4019-943A-7B4F96876153::net6.0::Hw7Tests.UserFormTests&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::E9FC68FC-2BCA-4019-943A-7B4F96876153::net6.0::Hw7Tests.TestFormTests&lt;/TestId&gt;&#xD;

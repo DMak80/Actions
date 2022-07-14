@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -46,11 +47,14 @@ public static class HtmlHelperExtensions
         return label;
     }
 
-    private static string SplitByCamelCase(this string s)
-        => s.Skip(1).Aggregate($"{s.FirstOrDefault()}",
-            (word, symbol) => word + (char.IsUpper(symbol)
-                ? $" {symbol}"
-                : symbol));
+    private static IEnumerable<string> SplitByCamelCase(this string s)
+    {
+        Regex regexCamelCase = new(@"([A-Z]+(?![a-z])|[A-Z][a-z]+|[0-9]+|[a-z]+)");
+        return regexCamelCase
+            .Matches(s)
+            .Select(a => a.Value);
+    }
+        
 
     private static IHtmlContent CreateDropDown(PropertyInfo propertyInfo, object model)
     {
@@ -58,8 +62,8 @@ public static class HtmlHelperExtensions
         {
             Attributes =
             {
-                { "id", propertyInfo.Name },
-                { "name", propertyInfo.Name }
+                {"id", propertyInfo.Name},
+                {"name", propertyInfo.Name}
             }
         };
 
@@ -85,8 +89,9 @@ public static class HtmlHelperExtensions
                 { "value", memInfo.Name }
             }
         };
-        if (memInfo.GetValue(enumType)?.Equals(modelValue) ?? false)
+        if (memInfo.GetValue(enumType)?.Equals(modelValue) != null)
             option.MergeAttribute("selected", "true");
+        else option.MergeAttribute("selected", "true");
         option.InnerHtml.AppendHtmlLine(GetDisplayName(memInfo));
         return option;
     }
@@ -118,7 +123,7 @@ public static class HtmlHelperExtensions
         return input;
     }
 
-    public static IHtmlContent MakeSpan(PropertyInfo propertyInfo, object model)
+    private static IHtmlContent MakeSpan(PropertyInfo propertyInfo, object model)
     {
         if (model is null) return null;
         var attributes = propertyInfo.GetCustomAttributes<ValidationAttribute>();
@@ -135,7 +140,9 @@ public static class HtmlHelperExtensions
                     { "data-replace", "true" }
                 }
             };
-            span.InnerHtml.Append(attr.ErrorMessage ?? attr.FormatErrorMessage(propertyInfo.Name)!);
+            if (attr.ErrorMessage != null)
+                span.InnerHtml.Append(attr.ErrorMessage);
+            else span.InnerHtml.Append(attr.FormatErrorMessage(propertyInfo.Name));
             return span;
         }
         return null;
