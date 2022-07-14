@@ -55,7 +55,7 @@ public class MathExpressionValidator: IMathExpressionValidator
             lastToken = currentToken;
         }
 
-        if (lastToken is { Type: TokenType.Operation })
+        if (lastToken is not null && lastToken.Value.Type is TokenType.Operation)
         {
             errorMessage = "An expression cannot end with an operation sign";
             return false;
