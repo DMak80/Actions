@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
 using Homework12;
 
-BenchmarkRunner.Run<WebTests>();
+BenchmarkRunner.Run<WebApplicationWorkingTimeTests>();

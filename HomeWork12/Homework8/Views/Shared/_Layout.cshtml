@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using StackExchange.Profiling
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -23,6 +25,7 @@
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
+    <mini-profiler position="RenderPosition.Right"></mini-profiler>
 </div>
 
 <footer class="border-top footer text-muted">
