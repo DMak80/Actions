@@ -54,7 +54,6 @@ public static class HtmlHelperExtensions
             .Matches(s)
             .Select(a => a.Value);
     }
-        
 
     private static IHtmlContent CreateDropDown(PropertyInfo propertyInfo, object model)
     {
@@ -66,7 +65,7 @@ public static class HtmlHelperExtensions
                 {"name", propertyInfo.Name}
             }
         };
-
+        
         var modelValue = model is not null ? propertyInfo.GetValue(model) : 0;
         var memberInfo = propertyInfo.PropertyType
             .GetFields(BindingFlags.Public | BindingFlags.Static);
@@ -89,9 +88,9 @@ public static class HtmlHelperExtensions
                 { "value", memInfo.Name }
             }
         };
-        if (memInfo.GetValue(enumType)?.Equals(modelValue) != null)
+        
+        if (memInfo.GetValue(enumType).Equals(modelValue))
             option.MergeAttribute("selected", "true");
-        else option.MergeAttribute("selected", "true");
         option.InnerHtml.AppendHtmlLine(GetDisplayName(memInfo));
         return option;
     }
@@ -140,9 +139,7 @@ public static class HtmlHelperExtensions
                     { "data-replace", "true" }
                 }
             };
-            if (attr.ErrorMessage != null)
-                span.InnerHtml.Append(attr.ErrorMessage);
-            else span.InnerHtml.Append(attr.FormatErrorMessage(propertyInfo.Name));
+            span.InnerHtml.Append(attr.ErrorMessage);
             return span;
         }
         return null;
