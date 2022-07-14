@@ -4,8 +4,6 @@ public readonly struct Token
 {
     public readonly TokenType Type;
     public readonly string Value;
-    
-    public bool IsOperation => Type == TokenType.Operation;
 
     public Token(TokenType type, string value)
     {
