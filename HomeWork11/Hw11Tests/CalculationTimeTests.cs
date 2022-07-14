@@ -31,8 +31,9 @@ public class CalculationTimeTests: IClassFixture<WebApplicationFactory<Program>>
     private async Task<long> GetRequestExecutionTime(string expression)
     {
         var watch = Stopwatch.StartNew();
-        await _client.PostCalculateExpressionAsync(expression);
+        var response = await _client.PostCalculateExpressionAsync(expression);
         watch.Stop();
+        response.EnsureSuccessStatusCode();
         return watch.ElapsedMilliseconds;
     }
 }

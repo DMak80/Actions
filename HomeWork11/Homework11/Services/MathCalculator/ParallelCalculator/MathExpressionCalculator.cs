@@ -25,12 +25,25 @@ public class MathExpressionCalculator : IMathExpressionCalculator
 
     private static double CalculateExpression(double v1, ExpressionType expressionType, double v2)
     {
-        return expressionType switch
+        double result =  0;
+        switch (expressionType)
         {
-            ExpressionType.Add => v1 + v2,
-            ExpressionType.Subtract => v1 - v2,
-            ExpressionType.Divide => v2 == 0 ? throw new DivideByZeroException("Division by zero") : v1 / v2,
-            ExpressionType.Multiply => v1 * v2,
-        };
+            case ExpressionType.Add:
+                result = v1 + v2;
+                break;
+            case ExpressionType.Subtract:
+                result = v1 - v2;
+                break;
+            case ExpressionType.Divide:
+                result = v2 != 0 
+                    ? v1 / v2 
+                    : throw new DivideByZeroException("Division by zero");
+                break;
+            case ExpressionType.Multiply:
+                result = v1 * v2;
+                break;
+        }
+
+        return result;
     }
 }

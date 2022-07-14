@@ -82,7 +82,7 @@ public class MathExpressionParser: IMathExpressionParser
                     isNegativeNumber = false;
                     break;
                 case TokenType.Operation:
-                    if (lastToken?.Value == "(" && currentToken.Value == "-")
+                    if (lastToken is not null && lastToken.Value.Value == "(" && currentToken.Value == "-")
                         isNegativeNumber = true;
                     else AddOperations(currentToken, outputStack, operatorStack);
                     break;
