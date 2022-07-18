@@ -36,6 +36,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework11", "HomeWork11\Homework11\Homework11.csproj", "{B875D9F0-8BEE-4A54-A675-D73044824E09}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw11Tests", "HomeWork11\Hw11Tests\Hw11Tests.csproj", "{23D32FED-3E78-426F-9FEF-023FCDAC7438}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork14", "HomeWork14", "{857DB9BE-A0E0-45D3-8F06-A2AB1ED573A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
