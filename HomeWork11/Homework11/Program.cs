@@ -1,13 +1,9 @@
 using System.Diagnostics.CodeAnalysis;
-using Homework11.Configuration;
-using Homework11.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddMathCalculator();
-builder.Services.AddTransient<IExceptionHandler, ExceptionHandler>();
 
 var app = builder.Build();
 if (!app.Environment.IsDevelopment())
