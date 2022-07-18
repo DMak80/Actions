@@ -1,5 +1,6 @@
 using System.Globalization;
 using System.Linq.Expressions;
+using Homework10.ErrorMessages;
 using Homework10.Services.MathCalculator.MathExpressionToken;
 
 namespace Homework10.Services.MathCalculator.Parser;
@@ -33,7 +34,6 @@ public class MathExpressionParser: IMathExpressionParser
         
         var tokens = new List<Token>();
         var number = "";
-        var errorMessageForNum = "There is no such number ";
         
         foreach (var symbol in expression.Replace(" ", ""))
         {
@@ -44,18 +44,18 @@ public class MathExpressionParser: IMathExpressionParser
             else if (_operations.Contains(symbol))
             {
                 if (!TryAddToken(ref number, tokens, symbol, TokenType.Operation))
-                    return new ParseResult($"{errorMessageForNum}{number}");
+                    return new ParseResult(MathErrorMessager.NotNumberMessage(number));
             }
             else if (char.IsDigit(symbol) || symbol == '.')
                 number += symbol;
             else
-                return new ParseResult($"Unknown character {symbol}");
+                return new ParseResult(MathErrorMessager.UnknownCharacterMessage(symbol));
         }
 
         if (!string.IsNullOrEmpty(number))
         {
             if (!double.TryParse(number, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out _))
-                return new ParseResult(errorMessageForNum + number);
+                return new ParseResult(MathErrorMessager.NotNumberMessage(number));
             
             tokens.Add(new Token(TokenType.Number, number));
         }
