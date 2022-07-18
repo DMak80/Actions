@@ -7,6 +7,7 @@ let isArgLengthSupported (args:string[]) =
     | 3 -> Ok args
     | _ -> Error Message.WrongArgLength
     
+[<System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage>]
 let inline isOperationSupported (arg1, operation, arg2) =
     match operation with
         | "+" -> Ok (arg1, CalculatorOperation.Plus, arg2)
@@ -20,6 +21,7 @@ let parseArgs (args: string[]) =
         Ok (args[0] |> decimal, args[1], args[2] |> decimal)
     with | _ -> Error Message.WrongArgFormat
 
+[<System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage>]
 let inline isDividingByZero (arg1, operation, arg2) =
     match operation with
     | CalculatorOperation.Divide when arg2.ToString() = "0" -> Error Message.DivideByZero

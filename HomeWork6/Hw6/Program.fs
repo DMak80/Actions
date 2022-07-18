@@ -17,7 +17,9 @@ let calculatorHandler: HttpHandler =
                 let values = [|expression.value1.ToString();expression.operation.ToString();expression.value2.ToString()|]
                 let result = Parser.parseCalcArguments values
                 match result with
-                | Ok resultOk -> return (Calculator.calculate resultOk.Item1 resultOk.Item2 resultOk.Item3).ToString()
+                | Ok resultOk ->
+                    match resultOk with
+                    | arg1, operation, arg2 -> return (Calculator.calculate arg1 operation arg2).ToString()
                 | Error resultError -> return resultError.ToString()
             }
 
