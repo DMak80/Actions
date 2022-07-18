@@ -52,7 +52,8 @@ let ``TestParserCorrectValues`` (value1, operation, value2, expectedValue) =
     let result = Parser.parseCalcArguments values
     match result with
     | Ok resultOk ->
-        Assert.True((abs (expectedValue - Calculator.calculate resultOk.Item1 resultOk.Item2 resultOk.Item3)) |> decimal < epsilon)
+        match resultOk with
+        | arg1, operation, arg2 -> Assert.True((abs (expectedValue - Calculator.calculate arg1 operation arg2)) |> decimal < epsilon)
         
 [<Theory>]
 [<InlineData("f", "+", "3")>]
