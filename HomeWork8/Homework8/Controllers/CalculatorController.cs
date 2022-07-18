@@ -20,16 +20,27 @@ public class CalculatorController : Controller
         var isOperation = Enum.TryParse<Operation>(operation, true, out var op);
         if (!isOperation)
             return "Недопустимая операция. Допустимые: plus, minus, multiply и divide";
-            
-        return op switch
+
+        string result = "";
+        switch (op)
         {
-            Operation.Plus => calculator.Plus(v1, v2),
-            Operation.Minus => calculator.Minus(v1, v2),
-            Operation.Multiply => calculator.Multiply(v1, v2),
-            Operation.Divide => calculator.Divide(v1, v2),
-        };
+            case Operation.Plus:
+                result = calculator.Plus(v1, v2);
+                break;
+            case Operation.Minus:
+                result = calculator.Minus(v1, v2);
+                break;
+            case Operation.Multiply:
+                result =  calculator.Multiply(v1, v2);
+                break;
+            case Operation.Divide:
+                result =  calculator.Divide(v1, v2);
+                break;
+        }
+
+        return result;
     }
-        
+    
     [ExcludeFromCodeCoverage]
     public IActionResult Index()
     {
