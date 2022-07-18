@@ -1,7 +1,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Homework7;
-using Homework7.Models;
+using Homework7.ErrorMessages;
 using Homework7.Models.ForTests;
 using Hw7Tests.Shared;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -35,10 +35,10 @@ public class TestFormTests : IClassFixture<WebApplicationFactory<Program>>
     }
     
     [Theory]
-    [InlineData("FirstName", TestHelper.RequiredMessage)]
+    [InlineData("FirstName", Messages.RequiredMessage)]
     [InlineData("LastName", "")]
-    [InlineData("MiddleName", TestHelper.RequiredMessage)]
-    [InlineData("Age", TestHelper.AgeRangeErrorMessage)]
+    [InlineData("MiddleName", Messages.RequiredMessage)]
+    [InlineData("Age", Messages.RangeMessage)]
     public async Task PostEmptyTestForm_CheckForRequiredProperty_EveryPropertyIsRequiredExceptLastName(string propertyName,
         string expected)
     {
@@ -54,8 +54,8 @@ public class TestFormTests : IClassFixture<WebApplicationFactory<Program>>
     }
     
     [Theory]
-    [InlineData("FirstName", $"First Name {TestHelper.MaxLengthMessage}")]
-    [InlineData("LastName", $"Last Name {TestHelper.MaxLengthMessage}")]
+    [InlineData("FirstName", $"First Name {Messages.MaxLengthMessage}")]
+    [InlineData("LastName", $"Last Name {Messages.MaxLengthMessage}")]
     [InlineData("MiddleName", "")]
     public async Task PostInvalidTestForm_CheckForMaxLengthValidation_EveryStringPropertyIsValidatedExceptMiddleName(string propertyName,
         string expected)

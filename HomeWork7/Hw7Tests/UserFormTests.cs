@@ -1,6 +1,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 using Homework7;
+using Homework7.ErrorMessages;
 using Homework7.Models;
 using Homework7.Models.ForTests;
 using Hw7Tests.Shared;
@@ -69,10 +70,10 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
     }
 
     [Theory]
-    [InlineData("FirstName", TestHelper.RequiredMessage)]
-    [InlineData("LastName", TestHelper.RequiredMessage)]
-    [InlineData("MiddleName", TestHelper.RequiredMessage)]
-    [InlineData("Age", TestHelper.AgeRangeErrorMessage)]
+    [InlineData("FirstName", Messages.RequiredMessage)]
+    [InlineData("LastName", Messages.RequiredMessage)]
+    [InlineData("MiddleName", Messages.RequiredMessage)]
+    [InlineData("Age", Messages.RangeMessage)]
     public async Task PostEmptyUserForm_ModelWithRequiredProps_EveryPropertyIsRequired(string propertyName,
         string expected)
     {
@@ -88,9 +89,9 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
     }
     
     [Theory]
-    [InlineData("FirstName", $"First Name {TestHelper.MaxLengthMessage}")]
-    [InlineData("LastName", $"Last Name {TestHelper.MaxLengthMessage}")]
-    [InlineData("MiddleName", $"Middle Name {TestHelper.MaxLengthMessage}")]
+    [InlineData("FirstName", $"First Name {Messages.MaxLengthMessage}")]
+    [InlineData("LastName", $"Last Name {Messages.MaxLengthMessage}")]
+    [InlineData("MiddleName", $"Middle Name {Messages.MaxLengthMessage}")]
     [InlineData("Age", "")]
     public async Task PostUserForm_ModelWithRequiredProps_EveryPropertyIsValidated(string propertyName,
         string expected)

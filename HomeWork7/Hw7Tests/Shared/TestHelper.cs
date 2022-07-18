@@ -11,9 +11,6 @@ namespace Hw7Tests.Shared;
 
 public static class TestHelper
 {
-    public const string RequiredMessage = "Fill this field!";
-    public const string AgeRangeErrorMessage = "Your age must be in the range from 10 to 100";
-    public const string MaxLengthMessage = "must be less than 30 symbols";
     public const string LongString = "Мороз и солнце; день чудесный! Еще ты дремлешь, друг прелестный...";
     
     public static async Task<string> GetFormHtml(HttpClient client, string url)

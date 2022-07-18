@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Homework7.ErrorMessages;
 using Homework7.Models.ForTests;
 
 namespace Homework7.Models;
@@ -11,22 +12,22 @@ public enum Sex : byte
 
 public class UserProfile : BaseModel
 {
-    [Required(ErrorMessage = "Fill this field!")]
-    [MaxLength(30, ErrorMessage = "First Name must be less than 30 symbols")]
+    [Required(ErrorMessage = Messages.RequiredMessage)]
+    [MaxLength(30, ErrorMessage = $"{nameof(FirstName)} {Messages.MaxLengthMessage}")]
     [Display(Name = "Имя")]
     public override string FirstName { get; set; } = null!;
 
-    [Required(ErrorMessage = "Fill this field!")]
-    [MaxLength(30, ErrorMessage = "Last Name must be less than 30 symbols")]
+    [Required(ErrorMessage = Messages.RequiredMessage)]
+    [MaxLength(30, ErrorMessage = $"{nameof(LastName)} {Messages.MaxLengthMessage}")]
     [Display(Name = "Фамилия")]
     public override string LastName { get; set; } = null!;
 
-    [Required(ErrorMessage = "Fill this field!")]
-    [MaxLength(30, ErrorMessage = "Middle Name must be less than 30 symbols")]
+    [Required(ErrorMessage = Messages.RequiredMessage)] 
+    [MaxLength(30, ErrorMessage = $"{nameof(MiddleName)} {Messages.MaxLengthMessage}")]
     [Display(Name = "Отчество")]
     public override string? MiddleName { get; set; }
     
-    [Range(10, 100, ErrorMessage = "Your age must be in the range from 10 to 100")]
+    [Range(10, 100, ErrorMessage = $"{nameof(Age)} {Messages.RangeMessage}")]
     [Display(Name = "Возраст")]
     public override int Age { get; set; }
         
