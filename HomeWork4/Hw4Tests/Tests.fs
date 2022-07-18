@@ -13,6 +13,10 @@ let ``TestAllOperations`` (value1, value2, operation, expectedValue) =
     Assert.Equal(expectedValue, Calculator.calculate value1 operation value2)
     
 [<Fact>]
+let ``TestInvalidOperation`` () =
+    Assert.Throws<ArgumentOutOfRangeException>(fun () -> Calculator.calculate 15 CalculatorOperation.Undefined 5 |> ignore)
+    
+[<Fact>]
 let ``TestDividingNonZeroByZero`` () =
     Assert.Equal(0 |> double, Calculator.calculate 0 CalculatorOperation.Divide 10)
     
