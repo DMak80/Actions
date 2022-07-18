@@ -31,6 +31,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Hw6", "HomeWork6\Hw6\Hw6.fs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw6Tests", "HomeWork6\Hw6Tests\Hw6Tests.csproj", "{5930217D-62A5-4ECE-B1D5-B30EF3548389}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork14", "HomeWork14", "{857DB9BE-A0E0-45D3-8F06-A2AB1ED573A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
