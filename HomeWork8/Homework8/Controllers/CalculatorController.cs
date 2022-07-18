@@ -1,6 +1,6 @@
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using Homework8.Calculator;
-using Homework8.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Homework8.Controllers;
@@ -30,6 +30,7 @@ public class CalculatorController : Controller
         };
     }
         
+    [ExcludeFromCodeCoverage]
     public IActionResult Index()
     {
         return Content(

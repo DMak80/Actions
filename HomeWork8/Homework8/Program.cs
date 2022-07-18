@@ -1,5 +1,7 @@
+using System.Diagnostics.CodeAnalysis;
 using Homework8.Calculator;
 
+[ExcludeFromCodeCoverage]
 public class Program
 {
     public static void Main(string[] args)
