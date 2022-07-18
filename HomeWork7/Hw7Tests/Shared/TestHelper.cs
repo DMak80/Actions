@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Homework7.Models;
+using Homework7.Models.ForTests;
 using HtmlAgilityPack;
 
 namespace Hw7Tests.Shared;

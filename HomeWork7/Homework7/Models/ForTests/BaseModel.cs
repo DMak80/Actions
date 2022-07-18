@@ -1,13 +1,11 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace Homework7.Models;
+namespace Homework7.Models.ForTests;
 
 public class BaseModel
 {
-    public virtual string FirstName { get; set; }
-    
-    public virtual string LastName { get; set; }
-    
+    public virtual string FirstName { get; set; } = null!;
+
+    public virtual string LastName { get; set; } = null!;
+
     public virtual string? MiddleName { get; set; }
     
     public virtual int Age { get; set; }

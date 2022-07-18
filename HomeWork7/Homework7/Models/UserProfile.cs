@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Homework7.Models.ForTests;
 
 namespace Homework7.Models;
 
@@ -13,13 +14,13 @@ public class UserProfile : BaseModel
     [Required(ErrorMessage = "Fill this field!")]
     [MaxLength(30, ErrorMessage = "First Name must be less than 30 symbols")]
     [Display(Name = "Имя")]
-    public override string FirstName { get; set; }
-        
+    public override string FirstName { get; set; } = null!;
+
     [Required(ErrorMessage = "Fill this field!")]
     [MaxLength(30, ErrorMessage = "Last Name must be less than 30 symbols")]
     [Display(Name = "Фамилия")]
-    public override string LastName { get; set; }
-        
+    public override string LastName { get; set; } = null!;
+
     [Required(ErrorMessage = "Fill this field!")]
     [MaxLength(30, ErrorMessage = "Middle Name must be less than 30 symbols")]
     [Display(Name = "Отчество")]

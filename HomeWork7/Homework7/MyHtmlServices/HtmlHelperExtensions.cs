@@ -11,7 +11,7 @@ public static class HtmlHelperExtensions
     public static IHtmlContent MyEditorForModel(this IHtmlHelper helper)
     {
         var typeModel = helper.ViewData.ModelMetadata.ModelType;
-        var htmlFields = typeModel.GetProperties().Select(p => p.ConvertFieldToHtml(helper.ViewData.Model));
+        var htmlFields = typeModel.GetProperties().Select(p => p.ConvertFieldToHtml(helper.ViewData.Model!));
         IHtmlContentBuilder result = new HtmlContentBuilder();
         return htmlFields.Aggregate(result, (current, content) => current.AppendHtml(content));
     }
@@ -24,7 +24,7 @@ public static class HtmlHelperExtensions
         };
         div.InnerHtml.AppendHtml(CreateLabelForTitle(propertyInfo));
         div.InnerHtml.AppendHtml(CreateFieldForInput(propertyInfo, model));
-        div.InnerHtml.AppendHtml(MakeSpan(propertyInfo, model));
+        div.InnerHtml.AppendHtml(MakeSpan(propertyInfo, model)!);
         return div;
     }
 
@@ -55,7 +55,7 @@ public static class HtmlHelperExtensions
             .Select(a => a.Value);
     }
 
-    private static IHtmlContent CreateDropDown(PropertyInfo propertyInfo, object model)
+    private static IHtmlContent CreateDropDown(PropertyInfo propertyInfo, object? model)
     {
         var select = new TagBuilder("select")
         {
@@ -78,7 +78,7 @@ public static class HtmlHelperExtensions
         return select;
     }
 
-    private static IHtmlContent CreateVariation(FieldInfo memInfo, object modelValue)
+    private static IHtmlContent CreateVariation(FieldInfo memInfo, object? modelValue)
     {
         var enumType = memInfo.DeclaringType;
         var option = new TagBuilder("option")
@@ -89,7 +89,7 @@ public static class HtmlHelperExtensions
             }
         };
         
-        if (memInfo.GetValue(enumType).Equals(modelValue))
+        if (memInfo.GetValue(enumType)!.Equals(modelValue))
             option.MergeAttribute("selected", "true");
         option.InnerHtml.AppendHtmlLine(GetDisplayName(memInfo));
         return option;
@@ -122,7 +122,7 @@ public static class HtmlHelperExtensions
         return input;
     }
 
-    private static IHtmlContent MakeSpan(PropertyInfo propertyInfo, object model)
+    private static IHtmlContent? MakeSpan(PropertyInfo propertyInfo, object? model)
     {
         if (model is null) return null;
         var attributes = propertyInfo.GetCustomAttributes<ValidationAttribute>();
@@ -139,7 +139,7 @@ public static class HtmlHelperExtensions
                     { "data-replace", "true" }
                 }
             };
-            span.InnerHtml.Append(attr.ErrorMessage);
+            if (attr.ErrorMessage != null) span.InnerHtml.Append(attr.ErrorMessage);
             return span;
         }
         return null;
