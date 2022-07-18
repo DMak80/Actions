@@ -1,5 +1,7 @@
 ﻿module Hw6.Calculator
 
+open System
+
 [<System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage>]
 let inline calculate value1 operation value2 =
     match operation with
@@ -7,3 +9,4 @@ let inline calculate value1 operation value2 =
     | CalculatorOperation.Minus -> value1 - value2
     | CalculatorOperation.Multiply -> value1 * value2
     | CalculatorOperation.Divide -> value1 / value2
+    | _ -> ArgumentOutOfRangeException() |> raise

@@ -3,6 +3,7 @@ module Hw5Tests.Tests
 open Hw5
 open Microsoft.FSharp.Core
 open Xunit
+open System
 
 let epsilon: decimal = 0.001m
         
@@ -54,6 +55,7 @@ let ``TestParserCorrectValues`` (value1, operation, value2, expectedValue) =
     | Ok resultOk ->
         match resultOk with
         | arg1, operation, arg2 -> Assert.True((abs (expectedValue - Calculator.calculate arg1 operation arg2)) |> decimal < epsilon)
+    | Error _ -> Assert.False |> ignore
         
 [<Theory>]
 [<InlineData("f", "+", "3")>]
@@ -63,6 +65,7 @@ let ``TestParserWrongValues`` (value1, operation, value2) =
     let args = [|value1;operation;value2|]
     let result = Parser.parseCalcArguments args
     match result with
+    | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgFormat)
     
 [<Fact>]
@@ -70,6 +73,7 @@ let ``TestParserWrongOperation`` () =
     let args = [|"3";".";"4"|]
     let result = Parser.parseCalcArguments args
     match result with
+    | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgFormatOperation)
     
 [<Fact>]
@@ -77,6 +81,7 @@ let ``TestParserWrongLength`` () =
     let args = [|"3";"+";"4";"5"|]
     let result = Parser.parseCalcArguments args
     match result with
+    | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgLength)
     
 [<Fact>]
@@ -84,5 +89,6 @@ let ``TestParserDividingByZero`` () =
     let args = [|"3";"/";"0"|]
     let result = Parser.parseCalcArguments args
     match result with
+    | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.DivideByZero)
 
