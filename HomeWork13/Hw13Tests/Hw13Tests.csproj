@@ -23,7 +23,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\HomeWork10\Homework10\Homework10.csproj" />
       <ProjectReference Include="..\CachedCalculator\Homework10\Homework10.csproj" />
     </ItemGroup>
 
