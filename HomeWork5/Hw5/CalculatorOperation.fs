@@ -5,4 +5,3 @@ type CalculatorOperation =
      | Minus = 1
      | Multiply = 2
      | Divide = 3
-     | UndefinedOperation = 4
