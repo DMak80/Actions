@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using HomeWork9.Dto;
+using HomeWork9.ErrorMessages;
 using HomeWork9.Services.MathCalculator.MathExpressionGraph;
 using HomeWork9.Services.MathCalculator.ParallelCalculator;
 using HomeWork9.Services.MathCalculator.Parser;
@@ -41,7 +42,7 @@ public class MathCalculatorService : IMathCalculatorService
         var result = await _mathExpressionCalculator.CalculateAsync(convertedExpression, calculationGraph);
 
         if (result is double.NaN)
-            return new CalculationMathExpressionResultDto("Division by zero");
+            return new CalculationMathExpressionResultDto(MathErrorMessager.DivisionByZero);
 
         return new CalculationMathExpressionResultDto(result);
     }

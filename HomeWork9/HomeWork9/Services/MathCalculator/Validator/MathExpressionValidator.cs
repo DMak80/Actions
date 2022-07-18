@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using HomeWork9.ErrorMessages;
 using HomeWork9.Services.MathCalculator.MathExpressionToken;
 
 namespace HomeWork9.Services.MathCalculator.Validator;
@@ -10,7 +11,7 @@ public class MathExpressionValidator: IMathExpressionValidator
     {
         if (!expressionInTokens.Any())
         {
-            errorMessage = "Empty string";
+            errorMessage = MathErrorMessager.EmptyString;
             return false;
         }
         
@@ -26,12 +27,11 @@ public class MathExpressionValidator: IMathExpressionValidator
                     break;
                 case TokenType.Operation:
                     if (lastToken is null)
-                        errorMessage = "An expression cannot start with an operation sign";
+                        errorMessage = MathErrorMessager.StartingWithOperation;
                     if (lastToken is { Type: TokenType.Operation })
-                        errorMessage = $"There are two operations in a row {lastToken.Value.Value} and {currentToken.Value}";
-                    if (lastToken is {Value: "("} && currentToken.Value != "-")
-                        errorMessage = "After the opening brackets, only negation can go:" +
-                                       $" {lastToken.Value.Value}{currentToken.Value}";
+                        errorMessage = MathErrorMessager.TwoOperationInRowMessage(lastToken.Value.Value, currentToken.Value);
+                    if (lastToken is { Value: "(" } && currentToken.Value != "-")
+                        errorMessage = MathErrorMessager.InvalidOperatorAfterParenthesisMessage(currentToken.Value);
                     break;
                 case TokenType.Bracket:
                     if (currentToken.Value == "(")
@@ -41,12 +41,12 @@ public class MathExpressionValidator: IMathExpressionValidator
                         amountOpeningBrackets--;
                         if (amountOpeningBrackets < 0)
                         {
-                            errorMessage = "The number of closing and opening brackets does not match";
+                            errorMessage = MathErrorMessager.IncorrectBracketsNumber;
                         }
                     }
+
                     if (lastToken?.Type is TokenType.Operation && currentToken.Value == ")")
-                        errorMessage = "There is only a number before the closing parenthesis" +
-                                       $" {lastToken.Value.Value}{currentToken.Value}";
+                        errorMessage = MathErrorMessager.OperationBeforeParenthesisMessage(lastToken.Value.Value);
                     break;
             }
 
@@ -57,13 +57,13 @@ public class MathExpressionValidator: IMathExpressionValidator
 
         if (lastToken?.Type == TokenType.Operation)
         {
-            errorMessage = "An expression cannot end with an operation sign";
+            errorMessage = MathErrorMessager.EndingWithOperation;
             return false;
         }
 
         if (amountOpeningBrackets != 0)
         {
-            errorMessage = "The number of closing and opening brackets does not match";
+            errorMessage = MathErrorMessager.IncorrectBracketsNumber;
             return false;
         }
 
