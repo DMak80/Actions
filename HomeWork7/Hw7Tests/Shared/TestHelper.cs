@@ -50,7 +50,7 @@ public static class TestHelper
         {
             {"FirstName", model.FirstName},
             {"LastName", model.LastName},
-            {"MiddleName", model.MiddleName},
+            {"MiddleName", model.MiddleName!},
             {"Age", model.Age.ToString()},
             {"Sex", model.Sex.ToString()},
         });
