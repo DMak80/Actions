@@ -4,6 +4,11 @@ namespace Homework11.Exceptions;
 
 public class ExceptionHandler : IExceptionHandler
 {
+	private const string UnknownError = "Unknown error";
+	private const string InvalidNumber = "Invalid number";
+	private const string InvalidSyntax = "Invalid syntax";
+	private const string InvalidSymbol = "Invalid symbol";
+	
 	private readonly ILogger<ExceptionHandler> _logger;
 
 	public ExceptionHandler(ILogger<ExceptionHandler> logger)
@@ -19,22 +24,22 @@ public class ExceptionHandler : IExceptionHandler
 	[ExcludeFromCodeCoverage]
 	private void Handle(Exception exception)
 	{
-		_logger.LogError($"Unknown error: {exception.Message}");
+		_logger.LogError($"{UnknownError}: {exception.Message}");
 	}
 
 	private void Handle(InvalidNumberException exception)
 	{
-		_logger.LogError($"Invalid number: {exception.Message}");
+		_logger.LogError($"{InvalidNumber}: {exception.Message}");
 	}
 
 	private void Handle(InvalidSyntaxException exception)
 	{
-		_logger.LogError($"Invalid syntax: {exception.Message}");
+		_logger.LogError($"{InvalidSyntax}: {exception.Message}");
 	}
 
 	private void Handle(InvalidSymbolException exception)
 	{
-		_logger.LogError($"Invalid symbol: {exception.Message}");
+		_logger.LogError($"{InvalidSymbol}: {exception.Message}");
 	}
 	
 	private void Handle(DivideByZeroException exception)

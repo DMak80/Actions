@@ -3,7 +3,7 @@ namespace Homework11.Dto;
 public class CalculationMathExpressionResultDto
 {
     public bool IsSuccess { get; set; }
-    public string ErrorMessage { get; set; }
+    public string ErrorMessage { get; set; } = null!;
     public double Result { get; set; }
     
     public CalculationMathExpressionResultDto(string errorMessage)
