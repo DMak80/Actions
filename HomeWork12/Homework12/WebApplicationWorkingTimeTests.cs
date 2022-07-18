@@ -1,4 +1,6 @@
 ﻿using BenchmarkDotNet.Attributes;
+using Homework8.Calculator;
+using Hw6;
 
 namespace Homework12;
 
@@ -19,57 +21,57 @@ public class WebApplicationWorkingTimeTests
 	[Benchmark]
 	public async Task PlusOperationTimeTestCSharp()
 	{
-		await SendRequestCSharp("1", "plus", "2");
+		await SendRequestCSharp("1", Operation.Plus, "2");
 	}
 		
 	[Benchmark]
 	public async Task SubtractionOperationTimeTestCSharp()
 	{
-		await SendRequestCSharp("3", "minus", "2");
+		await SendRequestCSharp("3", Operation.Minus, "2");
 	}
 		
 	[Benchmark]
 	public async Task MultiplicationOperationTimeTestCSharp()
 	{
-		await SendRequestCSharp("10", "multiply", "3");
+		await SendRequestCSharp("10", Operation.Multiply, "3");
 	}
 
 	[Benchmark]
 	public async Task DivisionOperationTimeTestCSharp()
 	{
-		await SendRequestCSharp("20", "divide", "10");
+		await SendRequestCSharp("20", Operation.Divide, "10");
 	}
 		
 	[Benchmark]
 	public async Task PlusOperationTimeTestFSharp()
 	{
-		await SendRequestFSharp("1", "Plus", "2");
+		await SendRequestFSharp("1", CalculatorOperation.Plus, "2");
 	}
 		
 	[Benchmark]
 	public async Task SubtractionOperationTimeTestFSharp()
 	{
-		await SendRequestFSharp("3", "Minus", "2");
+		await SendRequestFSharp("3", CalculatorOperation.Minus, "2");
 	}
 
 	[Benchmark]
 	public async Task MultiplicationOperationTimeTestFSharp()
 	{
-		await SendRequestFSharp("10", "Multiply", "3");
+		await SendRequestFSharp("10", CalculatorOperation.Multiply, "3");
 	}
 
 	[Benchmark]
 	public async Task DivisionOperationTimeTestFSharp()
 	{
-		await SendRequestFSharp("20", "Divide", "10");
+		await SendRequestFSharp("20", CalculatorOperation.Divide, "10");
 	}
 
-	private async Task SendRequestCSharp(string v1, string operation, string v2)
+	private async Task SendRequestCSharp(string v1, Operation operation, string v2)
 	{
 		await _cSharpClient.GetAsync($"/Calculator/Calculate?val1={v1}&operation={operation}&val2={v2}");
 	}
 		
-	private async Task SendRequestFSharp(string v1, string operation, string v2)
+	private async Task SendRequestFSharp(string v1, CalculatorOperation operation, string v2)
 	{
 		await _fSharpClient.GetAsync($"/calculate?value1={v1}&operation={operation}&value2={v2}");
 	}

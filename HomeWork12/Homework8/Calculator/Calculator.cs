@@ -15,6 +15,6 @@ public class Calculator : ICalculator
 
     public string Divide(double val1, double val2) =>
         val2 == 0
-            ? "Деление на 0. Результат не определён"
+            ? Messages.DivisionByZeroMessage
             : (val1 / val2).ToString(CultureInfo.InvariantCulture);
 }
