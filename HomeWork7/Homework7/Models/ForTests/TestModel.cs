@@ -8,21 +8,21 @@ public class TestModel : BaseModel
 {
     //without [Display(Name = "Имя")]
     [Required(ErrorMessage = Messages.RequiredMessage)]
-    [MaxLength(30, ErrorMessage = $"{nameof(FirstName)} {Messages.MaxLengthMessage}")]
+    [MaxLength(30, ErrorMessage = $"First Name {Messages.MaxLengthMessage}")]
     public override string FirstName { get; set; } = null!;
 
     //without [Required(ErrorMessage = Messages.RequiredMessage)]
-    [MaxLength(30, ErrorMessage = $"{nameof(LastName)} {Messages.MaxLengthMessage}")]
+    [MaxLength(30, ErrorMessage = $"Last Name {Messages.MaxLengthMessage}")]
     [Display(Name = "Фамилия")]
     public override string LastName { get; set; } = null!;
 
-    //without [MaxLength(30, ErrorMessage = $"{nameof(MiddleName)} {Messages.MaxLengthMessage}")]
+    //without [MaxLength(30, ErrorMessage = $"Middle Name {Messages.MaxLengthMessage}")]
     [Required(ErrorMessage = Messages.RequiredMessage)]
     [Display(Name = "Отчество")]
     public override string? MiddleName { get; set; }
     
     //without [Display(Name = "Возраст")]
-    [Range(10, 100, ErrorMessage = $"{nameof(Age)} {Messages.RangeMessage}")]
+    [Range(10, 100, ErrorMessage = $"Age {Messages.RangeMessage}")]
     public override int Age { get; set; }
     
     [Display(Name = "Пол")]

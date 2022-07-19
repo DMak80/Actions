@@ -38,7 +38,7 @@ public class TestFormTests : IClassFixture<WebApplicationFactory<Program>>
     [InlineData("FirstName", Messages.RequiredMessage)]
     [InlineData("LastName", "")]
     [InlineData("MiddleName", Messages.RequiredMessage)]
-    [InlineData("Age", Messages.RangeMessage)]
+    [InlineData("Age", $"Age {Messages.RangeMessage}")]
     public async Task PostEmptyTestForm_CheckForRequiredProperty_EveryPropertyIsRequiredExceptLastName(string propertyName,
         string expected)
     {

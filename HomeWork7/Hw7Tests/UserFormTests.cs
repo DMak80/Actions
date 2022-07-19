@@ -73,7 +73,7 @@ public class UserFormTests : IClassFixture<WebApplicationFactory<Program>>
     [InlineData("FirstName", Messages.RequiredMessage)]
     [InlineData("LastName", Messages.RequiredMessage)]
     [InlineData("MiddleName", Messages.RequiredMessage)]
-    [InlineData("Age", Messages.RangeMessage)]
+    [InlineData("Age", $"Age {Messages.RangeMessage}")]
     public async Task PostEmptyUserForm_ModelWithRequiredProps_EveryPropertyIsRequired(string propertyName,
         string expected)
     {
