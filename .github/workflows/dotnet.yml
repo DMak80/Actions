@@ -23,7 +23,10 @@ jobs:
       run: dotnet build --no-restore --configuration Release
     - name: TestDotMemoryUnit
       run: allPackages\jetbrains.dotmemoryunit\3.2.20220510\lib\tools\dotMemoryUnit.exe "C:\Program Files\dotnet\dotnet.exe" --propagate-exit-code -- test "HomeWork13\Hw13Tests\bin\Release\net6.0\Hw13Tests.dll" 
-
+    - name: Test
+      run: dotnet test HomeWork13/CachedCalculator/Hw10Tests/Hw10Tests.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage" --settings .github/coverlet.runsettings 
+    - name: Codecov
+      uses: codecov/codecov-action@v3.1.0
 
   test:
     runs-on: ubuntu-latest

@@ -30,7 +30,7 @@ public class MemoryTest : IClassFixture<WebApplicationFactory<Program>>
             var testDataGenerator = new TestDataGenerator();
             var list = testDataGenerator.GetValue();
             long size = 0;
-            for (var i = 0; i < 10000000; i++)
+            for (var i = 0; i < 100; i++)
             {
                 foreach (var element in list)
                 {
