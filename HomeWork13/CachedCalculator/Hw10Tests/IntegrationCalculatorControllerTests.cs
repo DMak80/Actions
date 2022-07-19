@@ -4,6 +4,7 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Homework10;
 using Homework10.Dto;
+using Homework10.ErrorMessages;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
@@ -19,6 +20,7 @@ public class IntegrationCalculatorControllerTests : IClassFixture<WebApplication
 	}
 	
 	[Theory]
+	[InlineData("10", "10")]
 	[InlineData("2 + 3", "5")]
 	[InlineData("(10 - 3) * 2", "14")]
 	[InlineData("3 - 4 / 2", "1")]
@@ -32,22 +34,22 @@ public class IntegrationCalculatorControllerTests : IClassFixture<WebApplication
 	}
 	
 	[Theory]
-	[InlineData(null, "Empty string")]
-	[InlineData("", "Empty string")]
-	[InlineData("10 + i", "Unknown character i")]
-	[InlineData("10 : 2", "Unknown character :")]
-	[InlineData("3 - 4 / 2.2.3", "There is no such number 2.2.3")]
-	[InlineData("2 - 2.23.1 - 23", "There is no such number 2.23.1")]
-	[InlineData("8 - / 2", "There are two operations in a row - and /")]
-	[InlineData("8 + (34 - + 2)", "There are two operations in a row - and +")]
-	[InlineData("4 - 10 * (/10 + 2)", "After the opening brackets, only negation can go: (/")]
-	[InlineData("10 - 2 * (10 - 1 /)", "There is only a number before the closing parenthesis /)")]
-	[InlineData("* 10 + 2", "An expression cannot start with an operation sign")]
-	[InlineData("10 + 2 -", "An expression cannot end with an operation sign")]
-	[InlineData("((10 + 2)", "The number of closing and opening brackets does not match")]
-	[InlineData("(10 - 2))", "The number of closing and opening brackets does not match")]
-	[InlineData("10 / 0", "Division by zero")]
-	[InlineData("10 / (1 - 1)", "Division by zero")]
+	[InlineData(null, MathErrorMessager.EmptyString)]
+	[InlineData("", MathErrorMessager.EmptyString)]
+	[InlineData("10 + i", $"{MathErrorMessager.UnknownCharacter} i")]
+	[InlineData("10 : 2", $"{MathErrorMessager.UnknownCharacter} :")]
+	[InlineData("3 - 4 / 2.2.3", $"{MathErrorMessager.NotNumber} 2.2.3")]
+	[InlineData("2 - 2.23.1 - 23", $"{MathErrorMessager.NotNumber} 2.23.1")]
+	[InlineData("8 - / 2", $"{MathErrorMessager.TwoOperationInRow} - and /")]
+	[InlineData("8 + (34 - + 2)", $"{MathErrorMessager.TwoOperationInRow} - and +")]
+	[InlineData("4 - 10 * (/10 + 2)", $"{MathErrorMessager.InvalidOperatorAfterParenthesis} (/")]
+	[InlineData("10 - 2 * (10 - 1 /)", $"{MathErrorMessager.OperationBeforeParenthesis} /)")]
+	[InlineData("* 10 + 2", MathErrorMessager.StartingWithOperation)]
+	[InlineData("10 + 2 -", MathErrorMessager.EndingWithOperation)]
+	[InlineData("((10 + 2)", MathErrorMessager.IncorrectBracketsNumber)]
+	[InlineData("(10 - 2))", MathErrorMessager.IncorrectBracketsNumber)]
+	[InlineData("10 / 0", MathErrorMessager.DivisionByZero)]
+	[InlineData("10 / (1 - 1)", MathErrorMessager.DivisionByZero)]
 	public async Task Calculate_CalculateExpression_Error(string expression, string result)
 	{
 		var response = await CalculateAsync(expression);

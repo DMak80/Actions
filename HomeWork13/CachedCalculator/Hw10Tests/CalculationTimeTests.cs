@@ -17,14 +17,17 @@ public class CalculationTimeTests: IClassFixture<WebApplicationFactory<Program>>
     }
     
     [Theory]
-    [InlineData("2 + 3 + 4 + 6", 3000, 4000)]
-    [InlineData("(2 * 3 + 3 * 3) * (5 / 5 + 6 / 6)", 3000, 4000)]
-    [InlineData("(2 + 3) / 12 * 7 + 8 * 9", 4000, 5000)]
+    [InlineData("2 + 3 + 4 + 6", 2990, 4000)]
+    [InlineData("(2 * 3 + 3 * 3) * (5 / 5 + 6 / 6)", 2990, 4000)]
+    [InlineData("(2 + 3) / 12 * 7 + 8 * 9", 3990, 5000)]
     private async Task Calculate_ParallelTest(string expression, long minExpectedTime, long maxExpectedTime)
     {
         var executionTime = await GetRequestExecutionTime(expression);
-        Assert.True(executionTime >= minExpectedTime);
-        Assert.True(executionTime <= maxExpectedTime);
+        
+        Assert.True(executionTime >= minExpectedTime, 
+            ErrorMessagerForTest.WaitingTimeIsLess(minExpectedTime, executionTime));
+        Assert.True(executionTime <= maxExpectedTime, 
+            ErrorMessagerForTest.WaitingTimeIsMore(maxExpectedTime, executionTime));
     }
     
     [Theory]

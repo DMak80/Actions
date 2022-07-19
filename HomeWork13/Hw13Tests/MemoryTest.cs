@@ -23,86 +23,86 @@ public class MemoryTest : IClassFixture<WebApplicationFactory<Program>>
     }
 
     [Fact]
-        [DotMemoryUnit(FailIfRunWithoutSupport = true, CollectAllocations = true)]
-        public void TestAsync()
+    [DotMemoryUnit(FailIfRunWithoutSupport = true, CollectAllocations = true)]
+    public void TestAsync()
+    {
+        var memoryBefore = dotMemory.Check();
+        var testDataGenerator = new TestDataGenerator();
+        var list = testDataGenerator.GetValue();
+        long size = 0;
+        for (var i = 0; i < 100; i++)
         {
-            var memoryBefore = dotMemory.Check();
-            var testDataGenerator = new TestDataGenerator();
-            var list = testDataGenerator.GetValue();
-            long size = 0;
-            for (var i = 0; i < 100; i++)
+            foreach (var element in list)
             {
-                foreach (var element in list)
-                {
-                    var postRequest = new HttpRequestMessage(HttpMethod.Post, "/Calculator/CalculateMathExpression");
-                    var formModel = new Dictionary<string, string> {{"str", element}};
-                    postRequest.Content = new FormUrlEncodedContent(formModel);
-                    _client.SendAsync(postRequest).GetAwaiter().GetResult();
-                    
-                    size += Encoding.UTF8.GetBytes(element).Length;
-                }
-            }
+                var postRequest = new HttpRequestMessage(HttpMethod.Post, "/Calculator/CalculateMathExpression");
+                var formModel = new Dictionary<string, string> { { "str", element } };
+                postRequest.Content = new FormUrlEncodedContent(formModel);
+                _client.SendAsync(postRequest).GetAwaiter().GetResult();
 
-            dotMemory.Check(memory =>
-            {
-                _output.WriteLine(memory.GetTrafficFrom(memoryBefore).CollectedMemory.SizeInBytes.ToString());
-                _output.WriteLine(size.ToString());
-                Assert.True(memory.GetTrafficFrom(memoryBefore).CollectedMemory.SizeInBytes >= size);
-            });
+                size += Encoding.UTF8.GetBytes(element).Length;
+            }
         }
+
+        dotMemory.Check(memory =>
+        {
+            _output.WriteLine(memory.GetTrafficFrom(memoryBefore).CollectedMemory.SizeInBytes.ToString());
+            _output.WriteLine(size.ToString());
+            Assert.True(memory.GetTrafficFrom(memoryBefore).CollectedMemory.SizeInBytes >= size);
+        });
+    }
+}
+
+public class TestDataGenerator
+{
+    private readonly List<string> _list = new()
+    {
+        "@+@",
+        "@+@+@",
+        "@+@-@",
+        "@+@*@",
+        "@+@/@",
+
+        "@-@",
+        "@-@+@",
+        "@-@-@",
+        "@-@*@",
+        "@-@/@",
+
+        "@*@",
+        "@*@+@",
+        "@*@-@",
+        "@*@*@",
+        "@*@/@",
+
+        "@/@",
+        "@/@+@",
+        "@/@-@",
+        "@/@*@",
+        "@/@/@",
+
+        "@*(@+@)+@"
+    };
+
+    private int GenerateRandomValue(Random random) => random.Next(1, 10000);
+
+    private string FillElement(Random random, string element)
+    {
+        var strBuilder = new StringBuilder();
+        foreach (var ch in element)
+        {
+            if (ch.Equals('@'))
+                strBuilder.Append(GenerateRandomValue(random));
+            else
+                strBuilder.Append(ch);
+        }
+
+        return strBuilder.ToString();
     }
 
-    public class TestDataGenerator
+    public IEnumerable<string> GetValue()
     {
-        private readonly List<string> _list = new()
-        {
-            "@+@",
-            "@+@+@",
-            "@+@-@",
-            "@+@*@",
-            "@+@/@",
-
-            "@-@",
-            "@-@+@",
-            "@-@-@",
-            "@-@*@",
-            "@-@/@",
-
-            "@*@",
-            "@*@+@",
-            "@*@-@",
-            "@*@*@",
-            "@*@/@",
-
-            "@/@",
-            "@/@+@",
-            "@/@-@",
-            "@/@*@",
-            "@/@/@",
-
-            "@*(@+@)+@"
-        };
-
-        private int GenerateRandomValue(Random random) => random.Next(1, 10000);
-
-        private string FillElement(Random random, string element)
-        {
-            var strBuilder = new StringBuilder();
-            foreach (var ch in element)
-            {
-                if (ch.Equals('@'))
-                    strBuilder.Append(GenerateRandomValue(random));
-                else
-                    strBuilder.Append(ch);
-            }
-
-            return strBuilder.ToString();
-        }
-
-        public IEnumerable<string> GetValue()
-        {
-            var random = new Random();
-            foreach (var element in _list)
-                yield return FillElement(random, element);
-        }
+        var random = new Random();
+        foreach (var element in _list)
+            yield return FillElement(random, element);
+    }
 }
