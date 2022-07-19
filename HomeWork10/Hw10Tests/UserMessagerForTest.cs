@@ -1,6 +1,6 @@
 namespace Hw10Tests;
 
-public static class ErrorMessagerForTest
+public static class UserMessagerForTest
 {
     public static string WaitingTimeIsLess(long minExpectedTime, long executionTime) =>
         $@"Время подсчета меньше ожидаемого.
