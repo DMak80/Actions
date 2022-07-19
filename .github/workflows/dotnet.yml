@@ -28,7 +28,7 @@ jobs:
     - name: Build in Debug mode
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal --collect:"XPlat Code Coverage" --settings .github/coverlet.runsettings 
+      run: dotnet test HomeWork13/CachedCalculator/Hw10Tests/Hw10Tests.csproj --no-build --verbosity normal --collect:"XPlat Code Coverage" --settings .github/coverlet.runsettings 
     - name: Codecov
       uses: codecov/codecov-action@v3.1.0
 
