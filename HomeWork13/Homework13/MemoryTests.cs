@@ -13,9 +13,9 @@ namespace Homework13;
 [ExcludeFromCodeCoverage]
 public class MemoryTests
 {
-    private MethodsForBenchmark _benchmarkMethod;
-    private string _testString;
-    private static MethodInfo _reflectionMethod;
+    private MethodsForBenchmark _benchmarkMethod = null!;
+    private string _testString = null!;
+    private static MethodInfo? _reflectionMethod;
         
     [GlobalSetup]
     public void Setup()
