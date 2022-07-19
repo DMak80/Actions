@@ -8,8 +8,8 @@ namespace Homework12;
 [MinColumn]
 public class WebApplicationWorkingTimeTests
 {
-	private HttpClient _cSharpClient;
-	private HttpClient _fSharpClient;
+	private HttpClient _cSharpClient = null!;
+	private HttpClient _fSharpClient = null!;
 		
 	[GlobalSetup]
 	public void SetUp()
@@ -18,29 +18,7 @@ public class WebApplicationWorkingTimeTests
 		_fSharpClient =  new TestApplicationFactoryFSharp().CreateClient();
 	}
 		
-	[Benchmark]
-	public async Task PlusOperationTimeTestCSharp()
-	{
-		await SendRequestCSharp("1", Operation.Plus, "2");
-	}
-		
-	[Benchmark]
-	public async Task SubtractionOperationTimeTestCSharp()
-	{
-		await SendRequestCSharp("3", Operation.Minus, "2");
-	}
-		
-	[Benchmark]
-	public async Task MultiplicationOperationTimeTestCSharp()
-	{
-		await SendRequestCSharp("10", Operation.Multiply, "3");
-	}
-
-	[Benchmark]
-	public async Task DivisionOperationTimeTestCSharp()
-	{
-		await SendRequestCSharp("20", Operation.Divide, "10");
-	}
+	
 		
 	[Benchmark]
 	public async Task PlusOperationTimeTestFSharp()
