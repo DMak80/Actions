@@ -22,9 +22,9 @@ public class CalculationTimeTests: IClassFixture<WebApplicationFactory<Program>>
         var executionTime = await GetRequestExecutionTime(expression);
         
         Assert.True(executionTime >= minExpectedTime, 
-            ErrorMessagerForTest.WaitingTimeIsLess(minExpectedTime, executionTime));
+            UserMessagerForTest.WaitingTimeIsLess(minExpectedTime, executionTime));
         Assert.True(executionTime <= maxExpectedTime, 
-            ErrorMessagerForTest.WaitingTimeIsMore(maxExpectedTime, executionTime));
+            UserMessagerForTest.WaitingTimeIsMore(maxExpectedTime, executionTime));
     }
     
     private async Task<long> GetRequestExecutionTime(string expression)
