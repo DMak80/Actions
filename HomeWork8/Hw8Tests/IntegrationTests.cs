@@ -39,4 +39,13 @@ public class IntegrationTests: IClassFixture<WebApplicationFactory<Program>>
         var actual = await response.Content.ReadAsStringAsync();
         Assert.Equal(expected, actual);
     }
+    
+    [Theory]
+    [InlineData("1", "qwerty", "4", Messages.InvalidOperationMessage)]
+    public async Task Calculate_UnavailableOperation_InvalidOperationMessageReturned(string val1, string operation, string val2, string expected)
+    {
+        var response = await _client.GetAsync($"{_url}/Calculator/Calculate?val1={val1}&operation={operation}&val2={val2}");
+        var actual = await response.Content.ReadAsStringAsync();
+        Assert.Equal(expected, actual);
+    }
 }
