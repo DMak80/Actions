@@ -5,10 +5,10 @@ open MaybeBuilder
 [<System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage>]
 let inline isOperationSupported (arg1, operation, arg2) =
     match operation with
-        | "Plus" -> Ok (arg1, CalculatorOperation.Plus, arg2)
-        | "Minus" -> Ok (arg1, CalculatorOperation.Minus, arg2)
-        | "Multiply" -> Ok (arg1, CalculatorOperation.Multiply, arg2)
-        | "Divide" -> Ok (arg1, CalculatorOperation.Divide, arg2)
+        | CalculatorOperationConstants.plus -> Ok (arg1, CalculatorOperation.Plus, arg2)
+        | CalculatorOperationConstants.minus -> Ok (arg1, CalculatorOperation.Minus, arg2)
+        | CalculatorOperationConstants.multiply -> Ok (arg1, CalculatorOperation.Multiply, arg2)
+        | CalculatorOperationConstants.divide -> Ok (arg1, CalculatorOperation.Divide, arg2)
         | _ -> Error Message.WrongArgFormatOperation
 
 let parseArgs (args: string[]) =
