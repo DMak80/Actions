@@ -18,7 +18,7 @@ public class CalculatorController : Controller
             return Messages.InvalidNumberMessage; 
 
         var isOperation = Enum.TryParse<Operation>(operation, true, out var op);
-        if (!isOperation || op == Operation.Invalid)
+        if (!isOperation || op is Operation.Invalid)
             return Messages.InvalidOperationMessage;
 
         string result = "";
