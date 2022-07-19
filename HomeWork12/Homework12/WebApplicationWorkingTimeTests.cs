@@ -17,9 +17,31 @@ public class WebApplicationWorkingTimeTests
 		_cSharpClient =  new TestApplicationFactoryCSharp().CreateClient();
 		_fSharpClient =  new TestApplicationFactoryFSharp().CreateClient();
 	}
-		
 	
+	[Benchmark]
+	public async Task PlusOperationTimeTestCSharp()
+	{
+		await SendRequestCSharp("1", Operation.Plus, "2");
+	}
 		
+	[Benchmark]
+	public async Task SubtractionOperationTimeTestCSharp()
+	{
+		await SendRequestCSharp("3", Operation.Minus, "2");
+	}
+		
+	[Benchmark]
+	public async Task MultiplicationOperationTimeTestCSharp()
+	{
+		await SendRequestCSharp("10", Operation.Multiply, "3");
+	}
+
+	[Benchmark]
+	public async Task DivisionOperationTimeTestCSharp()
+	{
+		await SendRequestCSharp("20", Operation.Divide, "10");
+	}
+	
 	[Benchmark]
 	public async Task PlusOperationTimeTestFSharp()
 	{
