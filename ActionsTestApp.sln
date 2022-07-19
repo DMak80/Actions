@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork7", "HomeWork7", "{F3CED895-EB28-434C-A0A7-33EDA6A2B56E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework7", "HomeWork7\Homework7\Homework7.csproj", "{26E5C44D-54B5-454E-BC78-8A3E20ED5519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw7Tests", "HomeWork7\Hw7Tests\Hw7Tests.csproj", "{BD4916BB-EFD5-499A-B847-152D890AC228}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26E5C44D-54B5-454E-BC78-8A3E20ED5519}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26E5C44D-54B5-454E-BC78-8A3E20ED5519}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26E5C44D-54B5-454E-BC78-8A3E20ED5519}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26E5C44D-54B5-454E-BC78-8A3E20ED5519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD4916BB-EFD5-499A-B847-152D890AC228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD4916BB-EFD5-499A-B847-152D890AC228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD4916BB-EFD5-499A-B847-152D890AC228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD4916BB-EFD5-499A-B847-152D890AC228}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{26E5C44D-54B5-454E-BC78-8A3E20ED5519} = {F3CED895-EB28-434C-A0A7-33EDA6A2B56E}
+		{BD4916BB-EFD5-499A-B847-152D890AC228} = {F3CED895-EB28-434C-A0A7-33EDA6A2B56E}
+	EndGlobalSection
+EndGlobal
