@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork10", "HomeWork10", "{F2A10D57-5D7A-486B-B56F-CD2985A0734E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework10", "HomeWork10\Homework10\Homework10.csproj", "{DCC9C8C9-B236-4387-8B33-A94F70C5D21C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw10Tests", "HomeWork10\Hw10Tests\Hw10Tests.csproj", "{6379729C-E3CE-4E13-B03B-F08DF79E1668}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DCC9C8C9-B236-4387-8B33-A94F70C5D21C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCC9C8C9-B236-4387-8B33-A94F70C5D21C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCC9C8C9-B236-4387-8B33-A94F70C5D21C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCC9C8C9-B236-4387-8B33-A94F70C5D21C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6379729C-E3CE-4E13-B03B-F08DF79E1668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6379729C-E3CE-4E13-B03B-F08DF79E1668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6379729C-E3CE-4E13-B03B-F08DF79E1668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6379729C-E3CE-4E13-B03B-F08DF79E1668}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DCC9C8C9-B236-4387-8B33-A94F70C5D21C} = {F2A10D57-5D7A-486B-B56F-CD2985A0734E}
+		{6379729C-E3CE-4E13-B03B-F08DF79E1668} = {F2A10D57-5D7A-486B-B56F-CD2985A0734E}
+	EndGlobalSection
+EndGlobal
