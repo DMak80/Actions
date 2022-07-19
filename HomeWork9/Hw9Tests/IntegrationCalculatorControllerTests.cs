@@ -1,18 +1,17 @@
 using System.Globalization;
-using System.Net.Http;
 using System.Net.Http.Json;
-using System.Threading.Tasks;
-using Homework10.Dto;
-using Homework10.ErrorMessages;
+using HomeWork9.Dto;
+using HomeWork9.ErrorMessages;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
-namespace Hw10Tests;
+namespace Hw9Tests;
 
-public class IntegrationCalculatorControllerTests : IClassFixture<TestApplicationFactory>
+public class IntegrationCalculatorControllerTests : IClassFixture<WebApplicationFactory<Program>>
 {
 	private readonly HttpClient _client;
 
-	public IntegrationCalculatorControllerTests(TestApplicationFactory fixture)
+	public IntegrationCalculatorControllerTests(WebApplicationFactory<Program> fixture)
 	{
 		_client = fixture.CreateClient();
 	}

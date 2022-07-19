@@ -1,4 +1,4 @@
-namespace Homework10.Dto;
+namespace HomeWork9.Dto;
 
 public class CalculationMathExpressionResultDto
 {
