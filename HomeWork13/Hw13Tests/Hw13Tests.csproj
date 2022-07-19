@@ -22,8 +22,4 @@
         </PackageReference>
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\CachedCalculator\Homework10\Homework10.csproj" />
-    </ItemGroup>
-
 </Project>

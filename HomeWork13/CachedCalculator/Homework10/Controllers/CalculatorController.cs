@@ -7,13 +7,6 @@ namespace Homework10.Controllers;
 
 public class CalculatorController : Controller
 {
-    private readonly IMathCalculatorService _mathCalculatorService;
-
-    public CalculatorController(IMathCalculatorService mathCalculatorService)
-    {
-        _mathCalculatorService = mathCalculatorService;
-    }
-        
     [HttpGet]
     [ExcludeFromCodeCoverage]
     public IActionResult Calculator()
@@ -24,7 +17,6 @@ public class CalculatorController : Controller
     [HttpPost]
     public async Task<ActionResult<CalculationMathExpressionResultDto>> CalculateMathExpression(string expression)
     {
-        var result = await _mathCalculatorService.CalculateMathExpressionAsync(expression);
-        return Json(result);
+        throw new NotImplementedException();
     }
 }
