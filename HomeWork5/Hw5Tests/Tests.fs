@@ -52,7 +52,9 @@ let ``TestParserCorrectValues`` (value1, operation, value2, expectedValue) =
     let result = Parser.parseCalcArguments values
     match result with
     | Ok resultOk ->
-        Assert.True((abs (expectedValue - Calculator.calculate resultOk.Item1 resultOk.Item2 resultOk.Item3)) |> decimal < epsilon)
+        match resultOk with
+        | arg1, operation, arg2 -> Assert.True((abs (expectedValue - Calculator.calculate arg1 operation arg2)) |> decimal < epsilon)
+    | Error _ -> Assert.False |> ignore
         
 [<Theory>]
 [<InlineData("f", "+", "3")>]
@@ -62,6 +64,7 @@ let ``TestParserWrongValues`` (value1, operation, value2) =
     let args = [|value1;operation;value2|]
     let result = Parser.parseCalcArguments args
     match result with
+    | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgFormat)
     
 [<Fact>]
@@ -69,6 +72,7 @@ let ``TestParserWrongOperation`` () =
     let args = [|"3";".";"4"|]
     let result = Parser.parseCalcArguments args
     match result with
+    | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgFormatOperation)
     
 [<Fact>]
@@ -76,6 +80,7 @@ let ``TestParserWrongLength`` () =
     let args = [|"3";"+";"4";"5"|]
     let result = Parser.parseCalcArguments args
     match result with
+    | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgLength)
     
 [<Fact>]
@@ -83,5 +88,6 @@ let ``TestParserDividingByZero`` () =
     let args = [|"3";"/";"0"|]
     let result = Parser.parseCalcArguments args
     match result with
+    | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.DivideByZero)
 
