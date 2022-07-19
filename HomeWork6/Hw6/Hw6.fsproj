@@ -16,6 +16,7 @@
     <ItemGroup>
         <Compile Include="MaybeBuilder.fs" />
         <Compile Include="CalculatorOperation.fs" />
+        <Compile Include="CalculatorOperationConstants.fs" />
         <Compile Include="InputExpression.fs" />
         <Compile Include="Message.fs" />
         <Compile Include="Calculator.fs" />
