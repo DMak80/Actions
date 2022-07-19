@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork11", "HomeWork11", "{FF15B482-4E0D-4698-8ACE-068237F3DA08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework11", "HomeWork11\Homework11\Homework11.csproj", "{B875D9F0-8BEE-4A54-A675-D73044824E09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hw11Tests", "HomeWork11\Hw11Tests\Hw11Tests.csproj", "{23D32FED-3E78-426F-9FEF-023FCDAC7438}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B875D9F0-8BEE-4A54-A675-D73044824E09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B875D9F0-8BEE-4A54-A675-D73044824E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B875D9F0-8BEE-4A54-A675-D73044824E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B875D9F0-8BEE-4A54-A675-D73044824E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23D32FED-3E78-426F-9FEF-023FCDAC7438}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23D32FED-3E78-426F-9FEF-023FCDAC7438}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23D32FED-3E78-426F-9FEF-023FCDAC7438}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23D32FED-3E78-426F-9FEF-023FCDAC7438}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B875D9F0-8BEE-4A54-A675-D73044824E09} = {FF15B482-4E0D-4698-8ACE-068237F3DA08}
+		{23D32FED-3E78-426F-9FEF-023FCDAC7438} = {FF15B482-4E0D-4698-8ACE-068237F3DA08}
+	EndGlobalSection
+EndGlobal

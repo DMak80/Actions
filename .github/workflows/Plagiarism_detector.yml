@@ -5,7 +5,7 @@ on:
     workflows: ['Test Report']                     # runs after CI workflow
     types:
       - completed
-    
+
 jobs:
 
   PlagiarismChecker:
