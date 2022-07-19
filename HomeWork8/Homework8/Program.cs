@@ -1,5 +1,4 @@
 using System.Diagnostics.CodeAnalysis;
-using Homework8.Calculator;
 
 [ExcludeFromCodeCoverage]
 public class Program
@@ -9,7 +8,6 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddControllersWithViews();
-        builder.Services.AddSingleton<ICalculator, Calculator>();
 
         var app = builder.Build();
 
