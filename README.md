@@ -2,7 +2,7 @@
 ![.NET](https://github.com/Giviruk/Actions/actions/workflows/dotnet.yml/badge.svg)
 [![codecov](https://codecov.io/gh/DMak80/Actions/branch/HW10/graph/badge.svg?token=AJ1EHK3XZH)](https://codecov.io/gh/DMak80/Actions)
 
-# Домашняя работа №10
+# Домашняя работа №10 - IQueryable и IQueryProvider
 
 ## Теория
 1. [IEnumerable и IQueryable в Entity Framework](https://metanit.com/sharp/entityframework/1.4.php)
