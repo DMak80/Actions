@@ -43,4 +43,4 @@ jobs:
       if: success() || failure()
       with:
         name: test-results
-        path: TestResults/*.trx
+        path: HomeWork*/Hw*Tests/TestResults/*.trx
