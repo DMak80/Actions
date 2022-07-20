@@ -28,7 +28,7 @@ jobs:
     - name: Build in Debug mode
       run: dotnet build --no-restore
     - name: Test
-      run: dotnet test --filter FullyQualifiedName!=HomeWork13\Hw13Tests\bin\Debug\net6.0\Hw13Tests.dll --no-build --verbosity normal --collect:"XPlat Code Coverage" --settings .github/coverlet.runsettings 
+      run: dotnet test --filter FullyQualifiedName!= HomeWork13\Hw13Tests\bin\Debug\net6.0\Hw13Tests.dll --no-build --verbosity normal --collect:"XPlat Code Coverage" --settings .github/coverlet.runsettings 
     - name: Codecov
       uses: codecov/codecov-action@v3.1.0
 
@@ -37,8 +37,10 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v3
+    - name: Build in Debug mode
+      run: dotnet build
     - name: test
-      run: dotnet test --filter FullyQualifiedName!=HomeWork13\Hw13Tests\bin\Debug\net6.0\Hw13Tests.dll --logger "trx;LogFileName=test-results.trx"
+      run: dotnet test --filter FullyQualifiedName!= HomeWork13\Hw13Tests\bin\Debug\net6.0\Hw13Tests.dll --logger "trx;LogFileName=test-results.trx" --no-build
     - uses: actions/upload-artifact@v2
       if: success() || failure()
       with:
