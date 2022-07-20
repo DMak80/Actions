@@ -1,6 +1,6 @@
 # Actions
 ![.NET](https://github.com/Giviruk/Actions/actions/workflows/dotnet.yml/badge.svg)
-[![codecov](https://codecov.io/gh/Giviruk/Actions/branch/HW13/graph/badge.svg?token=F5HFP6H9UI)](https://codecov.io/gh/Giviruk/Actions)
+[![codecov](https://codecov.io/gh/DMak80/Actions/branch/HW13/graph/badge.svg?token=AJ1EHK3XZH)](https://codecov.io/gh/DMak80/Actions)
 # Домашняя работа №13 - Память
 
 ## Теория
