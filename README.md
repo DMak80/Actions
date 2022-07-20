@@ -1,7 +1,8 @@
 ![.NET](https://github.com/Giviruk/Actions/actions/workflows/dotnet.yml/badge.svg)
 [![codecov](https://codecov.io/gh/DMak80/Actions/branch/HW1/graph/badge.svg?token=AJ1EHK3XZH)](https://codecov.io/gh/DMak80/Actions)
+# Домашняя работа №1 - Учимся учиться. Консольный калькулятор.
 
-# Теория
+## Теория
 1. [Программисты-оптимисты](https://habr.com/ru/post/178905/)
 2. [Джедайская техника](https://www.youtube.com/watch?v=jt3_sq8LQYM)
 3. [Память и обучение](https://www.youtube.com/watch?v=3_SVHS6t_LM)
@@ -19,4 +20,3 @@
 # Практика
 1. Написать консольное приложение "калькулятор"
 2. Добиться 100% покрытия калькулятора
-
