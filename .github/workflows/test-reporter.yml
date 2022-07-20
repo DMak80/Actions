@@ -4,6 +4,11 @@ on:
     workflows: ['.NET']                     # runs after CI workflow
     types:
       - completed
+      
+permissions:
+  statuses: write
+  checks: write
+
 jobs:
   report:
     runs-on: ubuntu-latest
