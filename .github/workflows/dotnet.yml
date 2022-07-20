@@ -46,3 +46,4 @@ jobs:
       with:
         name: test-results
         path: HomeWork*\Hw*Tests\TestResults\*.trx
+
