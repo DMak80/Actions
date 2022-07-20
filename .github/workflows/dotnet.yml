@@ -45,5 +45,5 @@ jobs:
       if: success() || failure()
       with:
         name: test-results
-        path: TestReport.trx
+        path: tests/TestReport.trx
 
