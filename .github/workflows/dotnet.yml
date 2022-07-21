@@ -2,9 +2,9 @@ name: .NET
 
 on:
   push:
-    branches: AllHW
+    branches: HW9
   pull_request:
-    branches: AllHW
+    branches: HW9
 
 jobs:
   build:
