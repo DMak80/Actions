@@ -1,7 +1,15 @@
-# Теория
-1. Прочитать все из списка [работа в команде, оценка, планирование](https://kpfu-net.myjetbrains.com/youtrack/articles/2k-A-2/Работа-в-команде,-оценка-и-планирование)
-2. [Юнит-тестирование для чайников](https://habr.com/ru/post/169381/)
-3. [Ежедневная работа с Git](https://habr.com/ru/post/174467/)
+![.NET](https://github.com/Giviruk/Actions/actions/workflows/dotnet.yml/badge.svg)
+[![codecov](https://codecov.io/gh/DMak80/Actions/branch/AllHW/graph/badge.svg?token=AJ1EHK3XZH)](https://codecov.io/gh/DMak80/Actions)
+# Домашняя работа №1 - Учимся учиться. Консольный калькулятор.
+
+## Теория
+1. [Программисты-оптимисты](https://habr.com/ru/post/178905/)
+2. [Джедайская техника](https://www.youtube.com/watch?v=jt3_sq8LQYM)
+3. [Память и обучение](https://www.youtube.com/watch?v=3_SVHS6t_LM)
+4. [Матрица Эйзенхауэра](https://timeweb.com/ru/community/articles/chto-takoe-matrica-eyzenhauera)
+5. [О пользе лаконичности](https://habr.com/ru/post/340434/)
+6. [Юнит-тестирование для чайников](https://habr.com/ru/post/169381/)
+7. [Ежедневная работа с Git](https://habr.com/ru/post/174467/)
 # Вопросы к семинару
 1. Когда информация переходит из краткосрочной памяти в долгосрочную?
 2. Почему за ночь нельзя выучить программу семестра?
@@ -12,5 +20,3 @@
 # Практика
 1. Написать консольное приложение "калькулятор"
 2. Добиться 100% покрытия калькулятора
-3. Настроить git actions (методичка - [2k-A-5](https://kpfu-net.myjetbrains.com/youtrack/articles/2k-A-5))
-4. Настроить [значки](https://kpfu-net.myjetbrains.com/youtrack/articles/2k-A-5/Как-настроить-значки-с-покрытием) с coverage на github
