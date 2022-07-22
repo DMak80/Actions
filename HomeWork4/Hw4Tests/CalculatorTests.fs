@@ -1,4 +1,4 @@
-module Hw4Tests.Tests
+module Hw4Tests.CalculatorTests
 
 open System
 open Hw4
@@ -10,22 +10,39 @@ open Xunit
 [<InlineData(15, 5, CalculatorOperation.Multiply, 75)>]
 [<InlineData(15, 5, CalculatorOperation.Divide, 3)>]
 let ``TestAllOperations`` (value1, value2, operation, expectedValue) =
-    Assert.Equal(expectedValue, Calculator.calculate value1 operation value2)
+    // act
+    let actual = Calculator.calculate value1 operation value2
+    
+    //assert
+    Assert.Equal(expectedValue, actual)
     
 [<Fact>]
 let ``TestInvalidOperation`` () =
+    //assert
     Assert.Throws<ArgumentOutOfRangeException>(fun () -> Calculator.calculate 15 CalculatorOperation.Undefined 5 |> ignore)
-
+    
 [<Fact>]
 let ``TestDividingNonZeroByZero`` () =
-    Assert.Equal(0 |> double, Calculator.calculate 0 CalculatorOperation.Divide 10)
+    //act 
+    let actual = Calculator.calculate 0 CalculatorOperation.Divide 10
+    
+    //assert
+    Assert.Equal(0 |> double, actual)
     
 [<Fact>]
 let ``TestDividingZeroByNonZero`` () =
-    Assert.Equal(Double.PositiveInfinity, Calculator.calculate 10 CalculatorOperation.Divide 0)
+    //act 
+    let actual = Calculator.calculate 10 CalculatorOperation.Divide 0
+    
+    //assert
+    Assert.Equal(Double.PositiveInfinity, actual)
     
 [<Fact>]
 let ``TestDividingZeroByZero`` () =
-    Assert.Equal(Double.NaN, Calculator.calculate 0 CalculatorOperation.Divide 0)
+    //act 
+    let actual = Calculator.calculate 0 CalculatorOperation.Divide 0
+    
+    //assert
+    Assert.Equal(Double.NaN, actual)
     
 
