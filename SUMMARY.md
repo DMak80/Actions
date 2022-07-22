@@ -1,21 +1,21 @@
 # Table of contents
 
-* [Введение](GitBookREADME.md)
+* [Getting started](GitBookREADME.md)
 
-## Домашние работы
+## Homeworks
 
-* [Домашняя работа 1](HomeWork1/HW1.md)
-* [Домашняя работа 2](HomeWork2/HW2.md)
-* [Домашняя работа 3](HomeWork3/HW3.md)
-* [Домашняя работа 4](HomeWork4/HW4.md)
-* [Домашняя работа 5](HomeWork5/HW5.md)
-* [Домашняя работа 6](HomeWork6/HW6.md)
-* [Домашняя работа 7](HomeWork7/HW7.md)
-* [Домашняя работа 8](HomeWork8/HW8.md)
-* [Домашняя работа 9](HomeWork9/HW9.md)
-* [Домашняя работа 10](HomeWork10/HW10.md)
-* [Домашняя работа 11](HomeWork11/HW11.md)
-* [Домашняя работа 12](HomeWork12/HW12.md)
-* [Домашняя работа 13](HomeWork13/HW13.md)
-* [Домашняя работа 14](HomeWork14/HW14.md)
-* [Домашняя работа 15](HomeWork15/HW15.md)
+* [Homework 1](MarkDownsEng/HW1.md)
+* [Homework 2](MarkDownsEng/HW2.md)
+* [Homework 3](MarkDownsEng/HW3.md)
+* [Homework 4](MarkDownsEng/HW4.md)
+* [Homework 5](MarkDownsEng/HW5.md)
+* [Homework 6](MarkDownsEng/HW6.md)
+* [Homework 7](MarkDownsEng/HW7.md)
+* [Homework 8](MarkDownsEng/HW8.md)
+* [Homework 9](MarkDownsEng/HW9.md)
+* [Homework 10](MarkDownsEng/HW10.md)
+* [Homework 11](MarkDownsEng/HW11.md)
+* [Homework 12](MarkDownsEng/HW12.md)
+* [Homework 13](MarkDownsEng/HW13.md)
+* [Homework 14](MarkDownsEng/HW14.md)
+* [Homework 15](MarkDownsEng/HW15.md)
