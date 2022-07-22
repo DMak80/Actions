@@ -20,3 +20,4 @@
 # Практика
 1. Написать консольное приложение "калькулятор"
 2. Добиться 100% покрытия калькулятора
+3. Настроить [значки](https://stackoverflow.com/questions/54010651/how-to-display-codecov-io-badge-in-github-readme-md) с coverage на github(заменить старую ссылку в README.md)
