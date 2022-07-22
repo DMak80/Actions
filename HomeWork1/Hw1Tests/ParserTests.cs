@@ -33,10 +33,9 @@ namespace Hw1Tests
         {
             // arrange
             var args = new[] { val1, operation, val2 };
-            var actual = Parser.ParseCalcArguments;
             
             //assert
-            Assert.Throws<ArgumentException>(() => actual(args, out _, out _, out _));
+            Assert.Throws<ArgumentException>(() => Parser.ParseCalcArguments(args, out _, out _, out _));
         }
         
         [Fact]
@@ -44,10 +43,9 @@ namespace Hw1Tests
         {
             // arrange
             var args = new[] { "3", ".", "4" };
-            var actual = Parser.ParseCalcArguments;
             
             //assert
-            Assert.Throws<InvalidOperationException>(() => actual(args, out _, out _, out _));
+            Assert.Throws<InvalidOperationException>(() => Parser.ParseCalcArguments(args, out _, out _, out _));
         }
 
         [Fact]
@@ -55,10 +53,9 @@ namespace Hw1Tests
         {
             // arrange
             var args = new[] { "3", ".", "4", "5" };
-            var actual = Parser.ParseCalcArguments;
             
             //assert
-            Assert.Throws<ArgumentException>(() => actual(args, out _, out _, out _));
+            Assert.Throws<ArgumentException>(() => Parser.ParseCalcArguments(args, out _, out _, out _));
         }
     }
 }

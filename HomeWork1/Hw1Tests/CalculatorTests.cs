@@ -23,11 +23,8 @@ namespace Hw1Tests
         [Fact]
         public void TestInvalidOperation()
         {
-            //arrange
-            var actual = Calculator.Calculate;
-            
             //assert
-            Assert.Throws<ArgumentOutOfRangeException>(() => actual(0, CalculatorOperation.Undefined, 10));
+            Assert.Throws<ArgumentOutOfRangeException>(() => Calculator.Calculate(0, CalculatorOperation.Undefined, 10));
         }
 
         [Fact]
