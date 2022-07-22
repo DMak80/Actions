@@ -104,11 +104,16 @@ namespace Hw6Tests
         private async Task RunTest(string value1, string value2, string operation, string expectedValueOrError,
             HttpStatusCode statusCode, bool isDividingByZero = false)
         {
-            var client = _factory.CreateClient();
+            // arrange
             var url = $"/calculate?value1={value1}&operation={operation}&value2={value2}";
+            
+            // act
+            var client = _factory.CreateClient();
             var response = await client.GetAsync(url);
-            Assert.True(response.StatusCode == statusCode);
             var result = await response.Content.ReadAsStringAsync();
+
+            // assert
+            Assert.True(response.StatusCode == statusCode);
             if (statusCode == HttpStatusCode.OK && !isDividingByZero)
                 Assert.True(Math.Abs(decimal.Parse(expectedValueOrError, CultureInfo.InvariantCulture) -
                                      decimal.Parse(result, CultureInfo.CurrentCulture)) < Epsilon);
