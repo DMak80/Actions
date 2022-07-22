@@ -1,6 +1,6 @@
 ﻿.class public abstract sealed auto ansi beforefieldinit
   IlClasses.Calculator
-    extends System.Object
+    extends [mscorlib]System.Object
 {
 
   .method public hidebysig static float64
@@ -13,4 +13,6 @@
     
   }
 }
+
+
 
