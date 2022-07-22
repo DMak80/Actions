@@ -1,4 +1,4 @@
-module Hw5Tests.Tests
+module Hw5Tests.ParserTests
 
 open Hw5
 open Microsoft.FSharp.Core
@@ -12,7 +12,11 @@ let epsilon: decimal = 0.001m
 [<InlineData(15, 5, CalculatorOperation.Multiply, 75)>]
 [<InlineData(15, 5, CalculatorOperation.Divide, 3)>]
 let ``TestCalculatorAllOperationsInt`` (value1 : int, value2: int, operation, expectedValue : int) =
-    Assert.Equal(expectedValue, Calculator.calculate value1 operation value2)
+    //act
+    let actual = Calculator.calculate value1 operation value2
+    
+    //assert
+    Assert.Equal(expectedValue, actual)
 
 [<Theory>]
 [<InlineData(15.6, 5.6, CalculatorOperation.Plus, 21.2)>]
@@ -20,7 +24,11 @@ let ``TestCalculatorAllOperationsInt`` (value1 : int, value2: int, operation, ex
 [<InlineData(15.6, 5.6, CalculatorOperation.Multiply, 87.36)>]
 [<InlineData(15.6, 5.6, CalculatorOperation.Divide, 2.7857)>]
 let ``TestCalculatorAllOperationsFloat`` (value1 : float, value2: float, operation, expectedValue : float) =
-    Assert.True((abs (expectedValue - Calculator.calculate value1 operation value2)) |> decimal < epsilon)
+    //act
+    let actual = (abs (expectedValue - Calculator.calculate value1 operation value2))
+    
+    //assert
+    Assert.True(actual |> decimal < epsilon)
     
 [<Theory>]
 [<InlineData(15.6, 5.6, CalculatorOperation.Plus, 21.2)>]
@@ -28,7 +36,11 @@ let ``TestCalculatorAllOperationsFloat`` (value1 : float, value2: float, operati
 [<InlineData(15.6, 5.6, CalculatorOperation.Multiply, 87.36)>]
 [<InlineData(15.6, 5.6, CalculatorOperation.Divide, 2.7857)>]
 let ``TestCalculatorAllOperationsDouble`` (value1 : double, value2: double, operation, expectedValue : double) =
-    Assert.True((abs (expectedValue - Calculator.calculate value1 operation value2)) |> decimal < epsilon)
+    //act
+    let actual = (abs (expectedValue - Calculator.calculate value1 operation value2))
+    
+    //assert
+    Assert.True(actual |> decimal < epsilon)
     
 [<Theory>]
 [<InlineData(15.6, 5.6, CalculatorOperation.Plus, 21.2)>]
@@ -36,7 +48,11 @@ let ``TestCalculatorAllOperationsDouble`` (value1 : double, value2: double, oper
 [<InlineData(15.6, 5.6, CalculatorOperation.Multiply, 87.36)>]
 [<InlineData(15.6, 5.6, CalculatorOperation.Divide, 2.7857)>]
 let ``TestCalculatorAllOperationsDecimal`` (value1 : decimal, value2: decimal, operation, expectedValue : decimal) =
-    Assert.True((abs (expectedValue - Calculator.calculate value1 operation value2)) |> decimal < epsilon)
+    //act
+    let actual = (abs (expectedValue - Calculator.calculate value1 operation value2))
+    
+    //assert
+    Assert.True(actual < epsilon)
     
 [<Theory>]
 [<InlineData("15", "+", "5", 20)>]
@@ -48,8 +64,13 @@ let ``TestCalculatorAllOperationsDecimal`` (value1 : decimal, value2: decimal, o
 [<InlineData("15.6", "*", "5.6", 87.36)>]
 [<InlineData("15.6", "/", "5.6", 2.7857)>]
 let ``TestParserCorrectValues`` (value1, operation, value2, expectedValue) =
+    //arrange
     let values = [|value1;operation;value2|]
+    
+    //act
     let result = Parser.parseCalcArguments values
+    
+    //assert
     match result with
     | Ok resultOk ->
         match resultOk with
@@ -61,32 +82,52 @@ let ``TestParserCorrectValues`` (value1, operation, value2, expectedValue) =
 [<InlineData("3", "+", "f")>]
 [<InlineData("a", "+", "f")>]
 let ``TestParserWrongValues`` (value1, operation, value2) =
+    //arrange
     let args = [|value1;operation;value2|]
+    
+    //act
     let result = Parser.parseCalcArguments args
+    
+    //assert
     match result with
     | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgFormat)
     
 [<Fact>]
 let ``TestParserWrongOperation`` () =
+    //arrange
     let args = [|"3";".";"4"|]
+    
+    //act
     let result = Parser.parseCalcArguments args
+    
+    //assert
     match result with
     | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgFormatOperation)
     
 [<Fact>]
 let ``TestParserWrongLength`` () =
+    //arrange
     let args = [|"3";"+";"4";"5"|]
+    
+    //act
     let result = Parser.parseCalcArguments args
+    
+    //assert
     match result with
     | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.WrongArgLength)
     
 [<Fact>]
 let ``TestParserDividingByZero`` () =
+    //arrange
     let args = [|"3";"/";"0"|]
+    
+    //act
     let result = Parser.parseCalcArguments args
+    
+    //assert
     match result with
     | Ok _ -> Assert.False |> ignore
     | Error resultError -> Assert.Equal(resultError, Message.DivideByZero)
