@@ -1,10 +1,12 @@
-# Homework №9 - Expression Trees
+# Homework 9
 
-## Theory
+## Expression Trees
+ 
+### Theory
  1. [Деревья выражений в enterprise](https://habr.com/ru/company/jugru/blog/423891/) ([repository with example](https://github.com/max-arshinov/Beyond-LINQ-Using-Expression-Trees-in-.NET))
  2. *Additional:* [*Async as surrogate IO*](https://blog.ploeh.dk/2016/04/11/async-as-surrogate-io/)
 
-## Questions
+### Questions
  1. What is the difference between IQueryable<T> and IEnumerable<T>?
  2. What are the types of lambda expressions in IQueryable methods.Where and IEnumerable.Where
  3. How to make delegate from Expression?
@@ -12,7 +14,7 @@
  5. What are the main scenarios for using Expressions in application development.
  6. Why you need to stop using Activator.CreateInstance and is it necessary?
  
-## Practice
+### Practice
  1. Change the input parameters of the calculator - pass a string with an expression, for example
  `(2+3) / 12 * 7 + 8 * 9`, convert a string to an Expression Tree
  2. To parse the tree, use [ExpressionVisitor](https://docs.microsoft.com/en-us/dotnet/api/system.linq.expressions.expressionvisitor?view=net-6.0)
