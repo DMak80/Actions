@@ -1,8 +1,8 @@
-
 # Домашняя работа №2
 
-## Теория
+## Версии и устройство .NET
 
+### Теория
 .NET &amp; C# history
  1. [The journey to one .net | .Net 5 and beyond | Microsoft build 2020](https://www.youtube.com/watch?v=oyF6RGKlvi8)
  2. [The history of C#](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-version-history)
@@ -21,7 +21,7 @@ JIT
  9. [Tiered compilation](https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#tiered-compilation)
  10. [Choosing the right defaults for tiered compilation](https://github.com/dotnet/runtime/issues/12515) 
 
-## Вопросы к семинару
+### Вопросы к семинару
 1. В чем различие между .NET Framework, .NET Core, .NET 5, .NET 6 и .NET Standard?
 2. Какие виды приложений можно разрабатывать на C#, начиная с .NET 5?
 3. С каким языком работает JIT?
@@ -32,6 +32,6 @@ JIT
 8. Объясните первокурснику как работает JIT-компиляция в .NET не дольше, чем за 3 минуты.
 9. Что такое Tiered compilation? В чем заключается компромисс JIT-компиляции?
 
-## Практика
+### Практика
 1. Переписать методы Calculate и Parse на IL, используя тип проекта Microsoft.NET.Sdk.IL
 2. Main и тесты могут остаться на C#
