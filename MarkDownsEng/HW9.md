@@ -23,9 +23,9 @@
  5. To test || requests, add an artificial delay of 1000ms on the backend
  ### Example of an execution
     2 + 3  
-    —---- / 12  
-    —----—---- * 7  
+    ----- / 12  
+    ---------- * 7  
     8 * 9  
-    —----—-------- +
+    -------------- +
 ### Additional task
 1.  Create AsyncEitherBuilder, issue a client on F#, working on the basis of AsyncEitherBuilder
