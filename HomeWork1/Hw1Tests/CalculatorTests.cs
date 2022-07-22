@@ -1,4 +1,5 @@
-using Hw1.Calculator;
+using System;
+using Hw1;
 using Xunit;
 
 namespace Hw1Tests
@@ -6,48 +7,54 @@ namespace Hw1Tests
     public class CalculatorTests
     {
         [Theory]
-        [InlineData(5, CalculatorOperation.Plus, 7, 12)]
-        [InlineData(-5, CalculatorOperation.Plus, 7, 2)]
-        [InlineData(-5, CalculatorOperation.Plus, -7, -12)]
-        [InlineData(5, CalculatorOperation.Plus, -7, -2)]
-        public void Calculate_Plus_WillReturnCorrectResult(int val1, CalculatorOperation operation, int val2, int expected)
+        [InlineData(15, 5, CalculatorOperation.Plus, 20)]
+        [InlineData(15, 5, CalculatorOperation.Minus, 10)]
+        [InlineData(15, 5, CalculatorOperation.Multiply, 75)]
+        [InlineData(15, 5, CalculatorOperation.Divide, 3)]
+        public void TestAllOperations(int value1, int value2, CalculatorOperation operation, int expectedValue)
         {
-            var result = Calculator.Calculate(val1, operation, val2);
-            Assert.Equal(expected, result);
+            //act
+            var actual = Calculator.Calculate(value1, operation, value2);
+
+            //assert
+            Assert.Equal(expectedValue, actual);
         }
         
-        [Theory]
-        [InlineData(5, CalculatorOperation.Minus, 7, -2)]
-        [InlineData(-5, CalculatorOperation.Minus, 7, -12)]
-        [InlineData(-5, CalculatorOperation.Minus, -7, 2)]
-        [InlineData(5, CalculatorOperation.Minus, -7, 12)]
-        public void Calculate_Minus_WillReturnCorrectResult(int val1, CalculatorOperation operation, int val2, int expected)
+        [Fact]
+        public void TestInvalidOperation()
         {
-            var result = Calculator.Calculate(val1, operation, val2);
-            Assert.Equal(expected, result);
-        }
-        
-        [Theory]
-        [InlineData(5, CalculatorOperation.Multiply, 7, 35)]
-        [InlineData(-5, CalculatorOperation.Multiply, 7, -35)]
-        [InlineData(-5, CalculatorOperation.Multiply, -7, 35)]
-        [InlineData(5, CalculatorOperation.Multiply, -7, -35)]
-        public void Calculate_Multiply_WillReturnCorrectResult(int val1, CalculatorOperation operation, int val2, int expected)
-        {
-            var result = Calculator.Calculate(val1, operation, val2);
-            Assert.Equal(expected, result);
+            //assert
+            Assert.Throws<ArgumentOutOfRangeException>(() => Calculator.Calculate(0, CalculatorOperation.Undefined, 10));
         }
 
-        [Theory]
-        [InlineData(10, CalculatorOperation.Divide, 5, 2)]
-        [InlineData(-10, CalculatorOperation.Divide, 5, -2)]
-        [InlineData(-10, CalculatorOperation.Divide, -5, 2)]
-        [InlineData(10, CalculatorOperation.Divide, -5, -2)]
-        [InlineData(7, CalculatorOperation.Divide, 2, 3.5)]
-        public void Calculate_Divide_WillReturnCorrectResult(int val1, CalculatorOperation operation, int val2, double expected)
+        [Fact]
+        public void TestDividingNonZeroByZero()
         {
-            var result = Calculator.Calculate(val1, operation, val2);
-            Assert.Equal(expected, result);
+            //act
+            var actual = Calculator.Calculate(0, CalculatorOperation.Divide, 10);
+
+            //assert
+            Assert.Equal(0, actual);
+        }
+
+        [Fact]
+        public void TestDividingZeroByNonZero()
+        {
+            //act
+            var actual = Calculator.Calculate(10, CalculatorOperation.Divide, 0);
+
+            //assert
+            Assert.Equal(double.PositiveInfinity, actual);
+        }
+        
+        [Fact]
+        public void TestDividingZeroByZero()
+        {
+            //act
+            var actual = Calculator.Calculate(0, CalculatorOperation.Divide, 0);
+
+            //assert
+            Assert.Equal(double.NaN, actual);
         }
     }
 }

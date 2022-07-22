@@ -1,6 +1,5 @@
-using Hw1.Calculator;
-using Hw1.Common;
-using Hw1.Errors;
+using System;
+using Hw1;
 using Xunit;
 
 namespace Hw1Tests
@@ -12,38 +11,51 @@ namespace Hw1Tests
         [InlineData("-", CalculatorOperation.Minus)]
         [InlineData("*", CalculatorOperation.Multiply)]
         [InlineData("/", CalculatorOperation.Divide)]
-        public void ParseCalcArguments_Operation_WillParse(string operation, CalculatorOperation operationExpected)
+        public void TestCorrectOperations(string operation, CalculatorOperation operationExpected)
         {
-            var args = new[] { "4", operation, "777" };
-            var check = Parser.ParseCalcArguments(args, out var val1, out var operationResult, out var val2);
-            Assert.Equal(ErrorCode.Correct, check);
-            Assert.Equal(4, val1);
-            Assert.Equal(operationExpected, operationResult);
-            Assert.Equal(777, val2);
-        }
+            // arrange
+            var args = new[] { "15", operation, "5" };
+            
+            //act
+            Parser.ParseCalcArguments(args, out var val1, out var operationResult, out var val2);
 
-        [Fact]
-        public void ParseCalcArguments_NotNumber_WillReturnWrongArgFormatInt()
+            //assert
+            Assert.Equal(15, val1);
+            Assert.Equal(operationExpected, operationResult);
+            Assert.Equal(5, val2);
+        }
+        
+        [Theory]
+        [InlineData("f", "+", "3")]
+        [InlineData("3", "+", "f")]
+        [InlineData("a", "+", "f")]
+        public void TestParserWrongValues(string val1, string operation, string val2)
         {
-            var args = new[] { "4", "+", "turn around" };
-            var check = Parser.ParseCalcArguments(args, out _, out _, out _);
-            Assert.Equal(ErrorCode.WrongArgFormatInt, check);
+            // arrange
+            var args = new[] { val1, operation, val2 };
+            
+            //assert
+            Assert.Throws<ArgumentException>(() => Parser.ParseCalcArguments(args, out _, out _, out _));
         }
         
         [Fact]
-        public void ParseCalcArguments_NotOperation_WillReturnWrongArgFormatOperation()
+        public void TestParserWrongOperation()
         {
-            var args = new[] { "4", "turn around", "1337" };
-            var check = Parser.ParseCalcArguments(args, out _, out _, out _);
-            Assert.Equal(ErrorCode.WrongArgFormatOperation, check);
+            // arrange
+            var args = new[] { "3", ".", "4" };
+            
+            //assert
+            Assert.Throws<InvalidOperationException>(() => Parser.ParseCalcArguments(args, out _, out _, out _));
         }
 
         [Fact]
-        public void ParseCalcArguments_WrongLengthArgs_WillReturnWrongArgLength()
+        public void TestParserWrongLength()
         {
-            var args = new[] { "4", "+", "1337", "Timur" };
-            var check = Parser.ParseCalcArguments(args, out _, out _, out _);
-            Assert.Equal(ErrorCode.WrongArgLength, check);
+            // arrange
+            var args = new[] { "3", ".", "4", "5" };
+            
+            //assert
+            Assert.Throws<ArgumentException>(() => Parser.ParseCalcArguments(args, out _, out _, out _));
         }
     }
 }
