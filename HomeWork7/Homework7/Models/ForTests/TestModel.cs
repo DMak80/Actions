@@ -27,4 +27,6 @@ public class TestModel : BaseModel
     
     [Display(Name = "Пол")]
     public override Sex Sex { get; set; }
+    
+    public string A { get; set; } = null!;
 }
