@@ -30,7 +30,7 @@ public static class HtmlHelperExtensions
 
     private static string GetDisplayName(MemberInfo propertyInfo) =>
         propertyInfo.GetCustomAttribute<DisplayAttribute>()?.Name ??
-        string.Join(" ", propertyInfo.Name.SplitByCamelCase());
+        propertyInfo.Name.SplitByCamelCase();
 
     private static IHtmlContent CreateLabelForTitle(PropertyInfo propertyInfo)
     {
@@ -47,12 +47,12 @@ public static class HtmlHelperExtensions
         return label;
     }
 
-    private static IEnumerable<string> SplitByCamelCase(this string s)
+    private static string SplitByCamelCase(this string s)
     {
-        Regex regexCamelCase = new(@"([A-Z]+(?![a-z])|[A-Z][a-z]+|[0-9]+|[a-z]+)");
-        return regexCamelCase
-            .Matches(s)
-            .Select(a => a.Value);
+        return s.Skip(1).Aggregate($"{s.FirstOrDefault()}",
+            (word, symbol) => word + (char.IsUpper(symbol)
+                ? $" {symbol}"
+                : symbol));
     }
 
     private static IHtmlContent CreateDropDown(PropertyInfo propertyInfo, object? model)
