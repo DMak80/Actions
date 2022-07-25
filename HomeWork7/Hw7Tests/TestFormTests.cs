@@ -22,6 +22,7 @@ public class TestFormTests : IClassFixture<WebApplicationFactory<Program>>
     [Theory]
     [InlineData("FirstName", "First Name")]
     [InlineData("Age", "Age")]
+    [InlineData("A", "A")]
     public async Task GetTestForm_PropsWithoutDisplayAttr_CamelCaseSplit(string propertyName, string expected)
     {
         //arrange
