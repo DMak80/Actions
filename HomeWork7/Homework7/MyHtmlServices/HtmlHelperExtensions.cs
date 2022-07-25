@@ -49,7 +49,7 @@ public static class HtmlHelperExtensions
 
     private static string SplitByCamelCase(this string s)
     {
-        if (s.Length == 1) return s;
+        if (s.Length <= 1) return s;
         return s.Skip(1).Aggregate($"{s.FirstOrDefault()}",
             (word, symbol) => word + (char.IsUpper(symbol)
                 ? $" {symbol}"
