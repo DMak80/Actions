@@ -50,7 +50,7 @@ public static class HtmlHelperExtensions
     private static string SplitByCamelCase(this string s)
     {
         if (s.Length <= 1) return s;
-        return s.Skip(1).Aggregate($"{s[0]}",
+        return s.Skip(1).Aggregate(string.Format("{0}", s[0]),
             (word, symbol) => word + (char.IsUpper(symbol)
                 ? string.Format(" {0}", symbol)
                 : symbol));
