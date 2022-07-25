@@ -52,7 +52,7 @@ public static class HtmlHelperExtensions
         if (s.Length <= 1) return s;
         return s.Skip(1).Aggregate($"{s[0]}",
             (word, symbol) => word + (char.IsUpper(symbol)
-                ? $" {symbol}"
+                ? string.Format(" {0}", symbol)
                 : symbol));
     }
 
